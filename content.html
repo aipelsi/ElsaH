@@ -36,17 +36,13 @@
             margin-top: 20px;
         }
         video {
-    width: 50%; /* Adjust this value to control the size of the video */
-    height: auto; /* This maintains the aspect ratio of the video */
-    border-radius: 5px;
-    margin-top: 20px;
-    display: block; /* Ensures the video is block level for margin to work */
-    margin-left: auto; /* These two margins center the video horizontally */
-    margin-right: auto;
-              }
-
-        audio {
-            display: none; /* Hide the audio controls */
+            width: 50%; /* Adjust this value to control the size of the video */
+            height: auto; /* This maintains the aspect ratio of the video */
+            border-radius: 5px;
+            margin-top: 20px;
+            display: block; /* Ensures the video is block level for margin to work */
+            margin-left: auto; /* These two margins center the video horizontally */
+            margin-right: auto;
         }
         .tabs-container {
             text-align: center;
@@ -61,14 +57,14 @@
     <p>Welcome to my site where I delve into various data visualizations, including insights from IMDb, Netflix, Airbnb, and Seattle's waste management. I also explore societal issues like obesity, employee satisfaction, and car loan price optimization. I invite you to explore my projects, visualizations, and tech and life-related blogs.</p>
     
     <!-- Video -->
-    <video controls loop autoplay muted>
+    <video controls loop autoplay >
         <source src="ElsaH.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
     <!-- Audio -->
-    <audio id="background-audio" loop>
-        <source src="Contnet.mp3" type="audio/mpeg">
+    <audio id="background-audio" autoplay loop muted>
+        <source src="Content.mp3" type="audio/mpeg">
         Your browser does not support the audio tag.
     </audio>
 
@@ -85,13 +81,21 @@
 <script>
     document.addEventListener('DOMContentLoaded', (event) => {
         const audio = document.getElementById('background-audio');
-        audio.play().catch(error => {
-            console.log("Auto-play was prevented by the browser.");
-            // Handle the failure to autoplay here, e.g., by showing a play button to the user
-        });
+        // Attempt to play the audio
+        const playPromise = audio.play();
+        
+        if (playPromise !== undefined) {
+            playPromise.then(_ => {
+                // Automatic playback started successfully
+            }).catch(error => {
+                console.log("Auto-play was prevented by the browser.");
+                // Handle the failure to autoplay here, e.g., by showing a play button to the user
+            });
+        }
     });
 </script>
 
 </body>
 </html>
+
 
