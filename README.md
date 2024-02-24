@@ -57,8 +57,7 @@
     <video autoplay loop>
         <source src="ElsaH.mp4" type="video/mp4">
        
-        Your browser does not support the video tag.
-    </video>
+</video>
 </div>
 
 <div class="content">
