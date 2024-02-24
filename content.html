@@ -36,11 +36,15 @@
             margin-top: 20px;
         }
         video {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
+    width: 50%; /* Adjust this value to control the size of the video */
+    height: auto; /* This maintains the aspect ratio of the video */
+    border-radius: 5px;
+    margin-top: 20px;
+    display: block; /* Ensures the video is block level for margin to work */
+    margin-left: auto; /* These two margins center the video horizontally */
+    margin-right: auto;
+              }
+
         audio {
             display: none; /* Hide the audio controls */
         }
