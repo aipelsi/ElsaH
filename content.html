@@ -27,14 +27,22 @@
         .container {
             position: relative;
             font-family: Arial, sans-serif;
-            max-width: 800px; /* Adjust the width of the container */
-            margin: 50px auto; /* Adjust the margin for vertical alignment and auto for horizontal centering */
+            max-width: 800px;
+            height: 100%; /* Take full height of the viewport */
+            margin-right: 0; /* Align to the right */
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            background-color: rgba(255, 255, 255, 0.8);
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             color: #333;
+            display: flex;
+            justify-content: flex-end; /* Align child div to the right */
+            align-items: center; /* Center child div vertically */
             z-index: 1;
+        }
+
+        .content {
+            text-align: right; /* Align text to the right */
         }
 
         h1, h2 {
@@ -63,16 +71,18 @@
 </head>
 <body>
 
-<video class="video-background" autoplay loop muted>
+<video class="video-background" autoplay loop>
     <source src="ElsaH.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
 
 <div class="container">
-    <h1>Welcome to My Website</h1>
-    <p>Welcome to my site where I delve into various data visualizations, including insights from IMDb, Netflix, Airbnb, and Seattle's waste management. I also explore societal issues like obesity, employee satisfaction, and car loan price optimization. I invite you to explore my projects, visualizations, and tech and life-related blogs.</p>
-    
-    <a href="index.html">Back to Home</a> <!-- Link back to your main portfolio page -->
+    <div class="content"> <!-- New div for content -->
+        <h1>Welcome to My Website</h1>
+        <p>Welcome to my site where I delve into various data visualizations, including insights from IMDb, Netflix, Airbnb, and Seattle's waste management. I also explore societal issues like obesity, employee satisfaction, and car loan price optimization. I invite you to explore my projects, visualizations, and tech and life-related blogs.</p>
+        
+        <a href="index.html">Back to Home</a> <!-- Link back to your main portfolio page -->
+    </div>
 </div>
 
 <!-- Tabs for Projects, Data Visualization, and Blogs -->
@@ -87,25 +97,5 @@
     Your browser does not support the audio tag.
 </audio>
 
-<script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-        const audio = document.getElementById('background-audio');
-        // Attempt to play the audio
-        const playPromise = audio.play();
-        
-        if (playPromise !== undefined) {
-            playPromise.then(_ => {
-                // Automatic playback started successfully
-            }).catch(error => {
-                console.log("Auto-play was prevented by the browser.");
-                // Handle the failure to autoplay here, e.g., by showing a play button to the user
-            });
-        }
-    });
-</script>
-
 </body>
 </html>
-
-
-
