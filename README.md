@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,6 +20,7 @@
             width: auto; 
             height: auto;
             z-index: -100;
+            object-fit: cover; /* Ensure it covers the entire viewport */
         }
         .content {
             position: relative;
@@ -54,10 +55,10 @@
 <body>
 
 <div class="video-background">
-    <video autoplay loop>
+    <video autoplay loop muted>
         <source src="space.mp4" type="video/mp4">
-       
-</video>
+        Your browser does not support the video tag.
+    </video>
 </div>
 
 <div class="content">
@@ -76,11 +77,8 @@
         </section>
 
         <section class="projects">
-    <h2>Projects</h2>
-    <a href="content.html">Content</a> <!-- Link to your new content page -->
-</section>
-
-            
+            <h2>Projects</h2>
+            <a href="content.html">Content</a> <!-- Link to your new content page -->
         </section>
     </div>
 
