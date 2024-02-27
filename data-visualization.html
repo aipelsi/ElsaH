@@ -1,120 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Visualization Dashboards</title>
+    <title>Interactive Dashboards</title>
     <style>
-        .dashboard-container {
-            margin: 20px;
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
         }
-        .dashboard {
-            margin-bottom: 40px;
+
+        .bg {
+            /* The image used */
+            background-image: url("neuron.jpg");
+
+            /* Full height */
+            height: 100%;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
-        .dashboard-title {
-            text-align: center;
-            margin-bottom: 20px;
+
+        /* Style the tab */
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
         }
-        /* Additional styling as needed */
+
+        /* Style the buttons inside the tab */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
     </style>
 </head>
 <body>
 
-<div class="dashboard-container">
-    <h2 class="dashboard-title">City of Seattle Recycling and Waste</h2>
-    <div class="dashboard" id="dashboard1">
-        <script type="text/javascript">
-            var divElement = document.getElementById('dashboard1'); 
-            var vizElement = divElement.getElementsByTagName('object')[0]; 
-            if (vizElement) {
-                vizElement.style.width='100%';vizElement.style.height='727px';
-            } else {
-                var vizElement = document.createElement('object');
-                vizElement.style.width='100%';vizElement.style.height='727px';
-                vizElement.innerHTML = '<param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />' + 
-                    '<param name="embed_code_version" value="3" />' + 
-                    '<param name="site_root" value="" />' + 
-                    '<param name="name" value="CityofSeattleRecyclingandWaste_17060666254950/Dashboard2" />' + 
-                    '<param name="tabs" value="no" />' + 
-                    '<param name="toolbar" value="yes" />' + 
-                    '<param name="static_image" value="https://public.tableau.com/static/images/Ci/CityofSeattleRecyclingandWaste_17060666254950/Dashboard2/1.png" />' + 
-                    '<param name="animate_transition" value="yes" />' + 
-                    '<param name="display_static_image" value="yes" />' + 
-                    '<param name="display_spinner" value="yes" />' + 
-                    '<param name="display_overlay" value="yes" />' + 
-                    '<param name="display_count" value="yes" />' + 
-                    '<param name="language" value="en-US" />';
-                divElement.appendChild(vizElement);
-                var scriptElement = document.createElement('script'); 
-                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; 
-                vizElement.parentNode.insertBefore(scriptElement, vizElement); 
-            }
-        </script>
+<div class="bg">
+    <div class="tab">
+      <button class="tablinks" onclick="openDashboard(event, 'City of Seattle Recycling and Waste')">Dashboard 1</button>
+      <button class="tablinks" onclick="openDashboard(event, 'Dashboard2')">Dashboard 2</button>
+      <button class="tablinks" onclick="openDashboard(event, 'Dashboard3')">Dashboard 3</button>
     </div>
 
-    <h2 class="dashboard-title">Seattle Real Time Fire 911 Calls</h2>
-    <div class="dashboard" id="dashboard2">
-        <script type="text/javascript">
-            var divElement = document.getElementById('dashboard2'); 
-            var vizElement = divElement.getElementsByTagName('object')[0]; 
-            if (vizElement) {
-                vizElement.style.width='100%';vizElement.style.height='727px';
-            } else {
-                var vizElement = document.createElement('object');
-                vizElement.style.width='100%';vizElement.style.height='727px';
-                vizElement.innerHTML = '<param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />' + 
-                    '<param name="embed_code_version" value="3" />' + 
-                    '<param name="site_root" value="" />' + 
-                    '<param name="name" value="SeattleRealTimeFire911Calls/Dashboard1" />' + 
-                    '<param name="tabs" value="no" />' + 
-                    '<param name="toolbar" value="yes" />' + 
-                    '<param name="static_image" value="https://public.tableau.com/static/images/Se/SeattleRealTimeFire911Calls/Dashboard1/1.png" />' + 
-                    '<param name="animate_transition" value="yes" />' + 
-                    '<param name="display_static_image" value="yes" />' + 
-                    '<param name="display_spinner" value="yes" />' + 
-                    '<param name="display_overlay" value="yes" />' + 
-                    '<param name="display_count" value="yes" />' + 
-                    '<param name="language" value="en-US" />';
-                divElement.appendChild(vizElement);
-                var scriptElement = document.createElement('script'); 
-                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; 
-                vizElement.parentNode.insertBefore(scriptElement, vizElement); 
-            }
-        </script>
+    <!-- Tab content -->
+    <div id="City of Seattle Recycling and Waste" class="tabcontent">
+        <<div class='tableauPlaceholder' id='viz1709065900814' style='position: relative'><noscript><a href='#'><img alt='City of Seattle Recycling and WasteJourney to 70% Recycling (2000-2020) ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ci&#47;CityofSeattleRecyclingandWaste_17060666254950&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='CityofSeattleRecyclingandWaste_17060666254950&#47;Dashboard2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ci&#47;CityofSeattleRecyclingandWaste_17060666254950&#47;Dashboard2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1709065900814');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1100px';vizElement.style.height='927px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1100px';vizElement.style.height='927px';} else { vizElement.style.width='100%';vizElement.style.height='1527px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>>
     </div>
 
-    <h2 class="dashboard-title">Visualizing U.S. Traffic Accident Data</h2>
-    <div class="dashboard" id="dashboard3">
-        <script type="text/javascript">
-            var divElement = document.getElementById('dashboard3'); 
-            var vizElement = divElement.getElementsByTagName('object')[0]; 
-            if (vizElement) {
-                vizElement.style.width='100%';vizElement.style.height='727px';
-            } else {
-                var vizElement = document.createElement('object');
-                vizElement.style.width='100%';vizElement.style.height='727px';
-                vizElement.innerHTML = '<param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />' + 
-                    '<param name="embed_code_version" value="3" />' + 
-                    '<param name="site_root" value="" />' + 
-                    '<param name="name" value="VisualizingUSTrafficAccidentData/Dashboard1" />' + 
-                    '<param name="tabs" value="no" />' + 
-                    '<param name="toolbar" value="yes" />' + 
-                    '<param name="static_image" value="https://public.tableau.com/static/images/Vi/VisualizingUSTrafficAccidentData/Dashboard1/1.png" />' + 
-                    '<param name="animate_transition" value="yes" />' + 
-                    '<param name="display_static_image" value="yes" />' + 
-                    '<param name="display_spinner" value="yes" />' + 
-                    '<param name="display_overlay" value="yes" />' + 
-                    '<param name="display_count" value="yes" />' + 
-                    '<param name="language" value="en-US" />';
-                divElement.appendChild(vizElement);
-                var scriptElement = document.createElement('script'); 
-                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; 
-                vizElement.parentNode.insertBefore(scriptElement, vizElement); 
-            }
-        </script>
+    <div id="Dashboard2" class="tabcontent">
+        <!-- Dashboard 2 content goes here -->
     </div>
 
+    <div id="Dashboard3" class="tabcontent">
+        <!-- Dashboard 3 content goes here -->
+    </div>
 </div>
+
+<script>
+function openDashboard(evt, dashboardName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(dashboardName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
 
 </body>
 </html>
