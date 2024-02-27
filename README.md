@@ -70,7 +70,7 @@
             <h2>About Me</h2>
             <div class="about-me">
                 <p>I am studying Information Systems as a MS graduate student at the University of Washington Foster School of Business. My passion lies in exploring AIML infrastructures and creating meaningful data visualizations. I thrive on diving into data, predicting social behaviors, evaluating health metrics, and tackling classification challenges.</p>
-                <p>Check out my website’s Visualization tab to experience the power of visual storytelling with data. The Projects tab gives you a sneak peek into the exciting endeavors I’ve been a part of, and the Blogs tab offers insights and reflections.</p>
+                <p>Check my website’s Visualization tab to experience the power of visual storytelling with data. The Projects tab gives you a sneak peek into the exciting endeavors I’ve been a part of, and the Blogs tab offers insights and reflections.</p>
                 <p>Let’s embark on a journey through the fascinating intersection of information, tech, and data. Excited to have you along!</p>
             </div>
         </section>
