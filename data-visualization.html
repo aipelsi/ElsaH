@@ -7,21 +7,14 @@
             height: 100%;
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-        }
-
-        .bg {
-            background-image: url("neuron.jpg");
-            height: 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
+            background-color: #eaeaea; /* Light background for better visibility */
         }
 
         .header {
             text-align: center;
             padding: 50px;
             font-size: 40px;
-            color: #fff;
+            color: #333; /* Dark text for contrast */
         }
 
         .tab {
@@ -58,11 +51,6 @@
             text-align: center; /* Center the content */
         }
 
-        .description {
-            padding: 20px;
-            text-align: center;
-        }
-
         .dashboard-container {
             position: relative;
             width: 100%;
@@ -81,13 +69,12 @@
 </head>
 <body>
 
-<div class="bg">
-    <div class="header">Tableau Dashboard</div>
-    <div class="tab">
-        <button class="tablinks" onclick="openDashboard(event, 'City-of-Seattle-Recycling-and-Waste')">Dashboard 1</button>
-        <button class="tablinks" onclick="openDashboard(event, 'Dashboard2')">Dashboard 2</button>
-        <button class="tablinks" onclick="openDashboard(event, 'Dashboard3')">Dashboard 3</button>
-    </div>
+<div class="header">Tableau Dashboard</div>
+<div class="tab">
+  <button class="tablinks" onclick="openDashboard(event, 'City-of-Seattle-Recycling-and-Waste')">Dashboard 1</button>
+  <button class="tablinks" onclick="openDashboard(event, 'Dashboard2')">Dashboard 2</button>
+  <button class="tablinks" onclick="openDashboard(event, 'Dashboard3')">Dashboard 3</button>
+</div>
 
     <div id="City-of-Seattle-Recycling-and-Waste" class="tabcontent">
         <p class="description">This dashboard provides insights into the City of Seattle's recycling and waste management performance over the years.</p>
