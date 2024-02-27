@@ -17,7 +17,16 @@
             background-size: cover;
         }
 
+        .header {
+            text-align: center;
+            padding: 50px;
+            font-size: 40px;
+            color: #fff;
+        }
+
         .tab {
+            display: flex;
+            justify-content: center;
             overflow: hidden;
             border: 1px solid #ccc;
             background-color: #f1f1f1;
@@ -25,7 +34,6 @@
 
         .tab button {
             background-color: inherit;
-            float: left;
             border: none;
             outline: none;
             cursor: pointer;
@@ -47,29 +55,39 @@
             padding: 6px 12px;
             border: 1px solid #ccc;
             border-top: none;
-            background-color: #fff; /* Ensure content is visible */
+            text-align: center; /* Center the content */
+        }
+
+        .description {
+            padding: 20px;
+            text-align: center;
         }
 
         .dashboard-container {
             position: relative;
             width: 100%;
+            padding-top: 56.25%;
+            height: 0;
         }
 
         .tableauViz {
-            width: 100%;
-            height: auto; /* Adjust this to maintain aspect ratio */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: 100% !important;
         }
     </style>
 </head>
 <body>
 
 <div class="bg">
+    <div class="header">Tableau Dashboard</div>
     <div class="tab">
-        <button class="tablinks" onclick="openDashboard(event, 'City-of-Seattle-Recycling-and-Waste')">Dashboard 1</button>
-        <button class="tablinks" onclick="openDashboard(event, 'Dashboard2')">Dashboard 2</button>
-        <button class="tablinks" onclick="openDashboard(event, 'Dashboard3')">Dashboard 3</button>
+      <button class="tablinks" onclick="openDashboard(event, 'City-of-Seattle-Recycling-and-Waste')">Dashboard 1</button>
+      <button class="tablinks" onclick="openDashboard(event, 'Dashboard2')">Dashboard 2</button>
+      <button class="tablinks" onclick="openDashboard(event, 'Dashboard3')">Dashboard 3</button>
     </div>
-
     <div id="City-of-Seattle-Recycling-and-Waste" class="tabcontent">
         <div class='tableauPlaceholder' style='position: relative'>
        <div>
