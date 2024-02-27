@@ -13,19 +13,24 @@
         }
         .video-background {
             position: fixed;
-            right: 0;
-            bottom: 0;
-            min-width: 100%; 
-            min-height: 100%;
-            width: auto; 
-            height: auto;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             z-index: -100;
-            object-fit: cover; /* Ensure it covers the entire viewport */
+            overflow: hidden;
+        }
+        .video-background video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            -o-object-fit: cover;
         }
         .content {
             position: relative;
             z-index: 100;
             color: #fff;
+            padding: 20px;
             text-align: center;
         }
         header, .container, footer {
@@ -34,6 +39,7 @@
         }
         .container {
             max-width: 800px;
+            background-color: rgba(0, 0, 0, 0.5);
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
         }
@@ -78,7 +84,7 @@
 
         <section class="projects">
             <h2>Projects</h2>
-            <a href="content.html">Content</a> <!-- Link to your new content page -->
+            <a href="content.html">Content</a>
         </section>
     </div>
 
@@ -89,3 +95,4 @@
 
 </body>
 </html>
+
