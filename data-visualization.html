@@ -47,22 +47,17 @@
             padding: 6px 12px;
             border: 1px solid #ccc;
             border-top: none;
+            background-color: #fff; /* Ensure content is visible */
         }
 
-        /* Adjusted Styles for Responsive Dashboard */
         .dashboard-container {
             position: relative;
-            width: 100%; /* Full width */
-            padding-top: 56.25%; /* Aspect Ratio 16:9 */
-            height: 0; /* Collapse the container */
+            width: 100%;
         }
 
         .tableauViz {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100% !important; /* Full width */
-            height: 100% !important; /* Full height */
+            width: 100%;
+            height: auto; /* Adjust this to maintain aspect ratio */
         }
     </style>
 </head>
@@ -70,52 +65,28 @@
 
 <div class="bg">
     <div class="tab">
-      <button class="tablinks" onclick="openDashboard(event, 'City of Seattle Recycling and Waste')">Dashboard 1</button>
-      <button class="tablinks" onclick="openDashboard(event, 'Dashboard2')">Dashboard 2</button>
-      <button class="tablinks" onclick="openDashboard(event, 'Dashboard3')">Dashboard 3</button>
+        <button class="tablinks" onclick="openDashboard(event, 'City-of-Seattle-Recycling-and-Waste')">Dashboard 1</button>
+        <button class="tablinks" onclick="openDashboard(event, 'Dashboard2')">Dashboard 2</button>
+        <button class="tablinks" onclick="openDashboard(event, 'Dashboard3')">Dashboard 3</button>
     </div>
 
-   <div id="City-of-Seattle-Recycling-and-Waste" class="tabcontent">
-    <div class="dashboard-container">
-          <div>
-    <div class='tableauPlaceholder' id='viz1709066551669' style='position: relative'>
-        <noscript>
-            <a href='#'>
-                <img alt='City of Seattle Recycling and WasteJourney to 70% Recycling (2000-2020) ' src='https://public.tableau.com/static/images/Ci/CityofSeattleRecyclingandWaste_17060666254950/Dashboard2/1_rss.png' style='border: none' />
-            </a>
-        </noscript>
-        <object class='tableauViz' style='display:none;'>
-            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-            <param name='embed_code_version' value='3' />
-            <param name='site_root' value='' />
-            <param name='name' value='CityofSeattleRecyclingandWaste_17060666254950/Dashboard2' />
-            <param name='tabs' value='no' />
-            <param name='toolbar' value='yes' />
-            <param name='static_image' value='https://public.tableau.com/static/images/Ci/CityofSeattleRecyclingandWaste_17060666254950/Dashboard2/1.png' />
-            <param name='animate_transition' value='yes' />
-            <param name='display_static_image' value='yes' />
-            <param name='display_spinner' value='yes' />
-            <param name='display_overlay' value='yes' />
-            <param name='display_count' value='yes' />
-            <param name='language' value='en-US' />
-        </object>
-    </div>
-    <script type='text/javascript'>
-        var divElement = document.getElementById('viz1709066551669');
-        var vizElement = divElement.getElementsByTagName('object')[0];
-        if (divElement.offsetWidth > 800) {
-            vizElement.style.width='1100px';vizElement.style.height='927px';
-        } else if (divElement.offsetWidth > 500) {
-            vizElement.style.width='1100px';vizElement.style.height='927px';
-        } else {
-            vizElement.style.width='100%';vizElement.style.height='1527px';
-        }
-        var scriptElement = document.createElement('script');
-        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-        vizElement.parentNode.insertBefore(scriptElement, vizElement);
-    </script>
-</div>
-
+    <div id="City-of-Seattle-Recycling-and-Waste" class="tabcontent">
+        <div class='tableauPlaceholder' style='position: relative'>
+            <!-- Tableau Embed Code -->
+            <noscript>
+                <a href='#'>
+                    <img alt='City of Seattle Recycling and Waste Journey to 70% Recycling (2000-2020)' src='https://public.tableau.com/static/images/Ci/CityofSeattleRecyclingandWaste_17060666254950/Dashboard2/1_rss.png' style='border: none' />
+                </a>
+            </noscript>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1709066551669'); 
+                var vizElement = divElement.getElementsByTagName('object')[0]; 
+                vizElement.style.width = '100%';
+                vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; // 4:3 aspect ratio
+                var scriptElement = document.createElement('script'); 
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; 
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
         </div>
     </div>
 
@@ -142,6 +113,11 @@ function openDashboard(evt, dashboardName) {
     document.getElementById(dashboardName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
+// Automatically open the first dashboard when the page loads
+window.onload = function() {
+    openDashboard(new Event('click'), 'City-of-Seattle-Recycling-and-Waste');
+};
 </script>
 
 </body>
