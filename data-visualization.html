@@ -10,26 +10,19 @@
         }
 
         .bg {
-            /* The image used */
             background-image: url("neuron.jpg");
-
-            /* Full height */
             height: 100%;
-
-            /* Center and scale the image nicely */
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
         }
 
-        /* Style the tab */
         .tab {
             overflow: hidden;
             border: 1px solid #ccc;
             background-color: #f1f1f1;
         }
 
-        /* Style the buttons inside the tab */
         .tab button {
             background-color: inherit;
             float: left;
@@ -41,22 +34,35 @@
             font-size: 17px;
         }
 
-        /* Change background color of buttons on hover */
         .tab button:hover {
             background-color: #ddd;
         }
 
-        /* Create an active/current tablink class */
         .tab button.active {
             background-color: #ccc;
         }
 
-        /* Style the tab content */
         .tabcontent {
             display: none;
             padding: 6px 12px;
             border: 1px solid #ccc;
             border-top: none;
+        }
+
+        /* Adjusted Styles for Responsive Dashboard */
+        .dashboard-container {
+            position: relative;
+            width: 100%; /* Full width */
+            padding-top: 56.25%; /* Aspect Ratio 16:9 */
+            height: 0; /* Collapse the container */
+        }
+
+        .tableauViz {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100% !important; /* Full width */
+            height: 100% !important; /* Full height */
         }
     </style>
 </head>
@@ -69,9 +75,11 @@
       <button class="tablinks" onclick="openDashboard(event, 'Dashboard3')">Dashboard 3</button>
     </div>
 
-    <!-- Tab content -->
     <div id="City of Seattle Recycling and Waste" class="tabcontent">
-        <<div class='tableauPlaceholder' id='viz1709065900814' style='position: relative'><noscript><a href='#'><img alt='City of Seattle Recycling and WasteJourney to 70% Recycling (2000-2020) ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ci&#47;CityofSeattleRecyclingandWaste_17060666254950&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='CityofSeattleRecyclingandWaste_17060666254950&#47;Dashboard2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ci&#47;CityofSeattleRecyclingandWaste_17060666254950&#47;Dashboard2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1709065900814');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1100px';vizElement.style.height='927px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1100px';vizElement.style.height='927px';} else { vizElement.style.width='100%';vizElement.style.height='1527px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>>
+        <div class="dashboard-container">
+            <<div class='tableauPlaceholder' id='viz1709066551669' style='position: relative'><noscript><a href='#'><img alt='City of Seattle Recycling and WasteJourney to 70% Recycling (2000-2020) ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ci&#47;CityofSeattleRecyclingandWaste_17060666254950&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='CityofSeattleRecyclingandWaste_17060666254950&#47;Dashboard2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ci&#47;CityofSeattleRecyclingandWaste_17060666254950&#47;Dashboard2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1709066551669');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1100px';vizElement.style.height='927px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1100px';vizElement.style.height='927px';} else { vizElement.style.width='100%';vizElement.style.height='1527px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>>
+            <!-- Ensure the iframe or object element has class="tableauViz" for styling -->
+        </div>
     </div>
 
     <div id="Dashboard2" class="tabcontent">
