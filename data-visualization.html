@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization Dashboards</title>
+    <style>
+        .dashboard-container {
+            margin: 20px;
+        }
+        .dashboard {
+            margin-bottom: 40px;
+        }
+        .dashboard-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        /* Additional styling as needed */
+    </style>
+</head>
+<body>
+
+<div class="dashboard-container">
+    <h2 class="dashboard-title">City of Seattle Recycling and Waste</h2>
+    <div class="dashboard" id="dashboard1">
+        <script type="text/javascript">
+            var divElement = document.getElementById('dashboard1'); 
+            var vizElement = divElement.getElementsByTagName('object')[0]; 
+            if (vizElement) {
+                vizElement.style.width='100%';vizElement.style.height='727px';
+            } else {
+                var vizElement = document.createElement('object');
+                vizElement.style.width='100%';vizElement.style.height='727px';
+                vizElement.innerHTML = '<param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />' + 
+                    '<param name="embed_code_version" value="3" />' + 
+                    '<param name="site_root" value="" />' + 
+                    '<param name="name" value="CityofSeattleRecyclingandWaste_17060666254950/Dashboard2" />' + 
+                    '<param name="tabs" value="no" />' + 
+                    '<param name="toolbar" value="yes" />' + 
+                    '<param name="static_image" value="https://public.tableau.com/static/images/Ci/CityofSeattleRecyclingandWaste_17060666254950/Dashboard2/1.png" />' + 
+                    '<param name="animate_transition" value="yes" />' + 
+                    '<param name="display_static_image" value="yes" />' + 
+                    '<param name="display_spinner" value="yes" />' + 
+                    '<param name="display_overlay" value="yes" />' + 
+                    '<param name="display_count" value="yes" />' + 
+                    '<param name="language" value="en-US" />';
+                divElement.appendChild(vizElement);
+                var scriptElement = document.createElement('script'); 
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; 
+                vizElement.parentNode.insertBefore(scriptElement, vizElement); 
+            }
+        </script>
+    </div>
+
+    <h2 class="dashboard-title">Seattle Real Time Fire 911 Calls</h2>
+    <div class="dashboard" id="dashboard2">
+        <script type="text/javascript">
+            var divElement = document.getElementById('dashboard2'); 
+            var vizElement = divElement.getElementsByTagName('object')[0]; 
+            if (vizElement) {
+                vizElement.style.width='100%';vizElement.style.height='727px';
+            } else {
+                var vizElement = document.createElement('object');
+                vizElement.style.width='100%';vizElement.style.height='727px';
+                vizElement.innerHTML = '<param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />' + 
+                    '<param name="embed_code_version" value="3" />' + 
+                    '<param name="site_root" value="" />' + 
+                    '<param name="name" value="SeattleRealTimeFire911Calls/Dashboard1" />' + 
+                    '<param name="tabs" value="no" />' + 
+                    '<param name="toolbar" value="yes" />' + 
+                    '<param name="static_image" value="https://public.tableau.com/static/images/Se/SeattleRealTimeFire911Calls/Dashboard1/1.png" />' + 
+                    '<param name="animate_transition" value="yes" />' + 
+                    '<param name="display_static_image" value="yes" />' + 
+                    '<param name="display_spinner" value="yes" />' + 
+                    '<param name="display_overlay" value="yes" />' + 
+                    '<param name="display_count" value="yes" />' + 
+                    '<param name="language" value="en-US" />';
+                divElement.appendChild(vizElement);
+                var scriptElement = document.createElement('script'); 
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; 
+                vizElement.parentNode.insertBefore(scriptElement, vizElement); 
+            }
+        </script>
+    </div>
+
+    <h2 class="dashboard-title">Visualizing U.S. Traffic Accident Data</h2>
+    <div class="dashboard" id="dashboard3">
+        <script type="text/javascript">
+            var divElement = document.getElementById('dashboard3'); 
+            var vizElement = divElement.getElementsByTagName('object')[0]; 
+            if (vizElement) {
+                vizElement.style.width='100%';vizElement.style.height='727px';
+            } else {
+                var vizElement = document.createElement('object');
+                vizElement.style.width='100%';vizElement.style.height='727px';
+                vizElement.innerHTML = '<param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />' + 
+                    '<param name="embed_code_version" value="3" />' + 
+                    '<param name="site_root" value="" />' + 
+                    '<param name="name" value="VisualizingUSTrafficAccidentData/Dashboard1" />' + 
+                    '<param name="tabs" value="no" />' + 
+                    '<param name="toolbar" value="yes" />' + 
+                    '<param name="static_image" value="https://public.tableau.com/static/images/Vi/VisualizingUSTrafficAccidentData/Dashboard1/1.png" />' + 
+                    '<param name="animate_transition" value="yes" />' + 
+                    '<param name="display_static_image" value="yes" />' + 
+                    '<param name="display_spinner" value="yes" />' + 
+                    '<param name="display_overlay" value="yes" />' + 
+                    '<param name="display_count" value="yes" />' + 
+                    '<param name="language" value="en-US" />';
+                divElement.appendChild(vizElement);
+                var scriptElement = document.createElement('script'); 
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; 
+                vizElement.parentNode.insertBefore(scriptElement, vizElement); 
+            }
+        </script>
+    </div>
+
+</div>
+
+</body>
+</html>
