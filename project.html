@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background: "neuron.jpg"no-repeat center center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        .projects-tab {
+            text-align: center; /* Center-align the content */
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            margin: auto;
+            width: 80%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 36px; /* Big size for the title */
+            color: #333; /* Dark text color for better readability */
+        }
+
+        .tab-link {
+            background-color: #f9f9f9;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 20px;
+            font-size: 17px;
+            transition: background-color 0.3s;
+        }
+
+        .tab-link:hover {
+            background-color: #ddd; /* Light grey background on hover */
+        }
+
+        .tab-link.active {
+            background-color: #ccc; /* Slightly darker grey for the active tab */
+        }
+
+        .tab-content {
+            display: none; /* Hide content by default */
+            padding: 20px;
+            border: 1px solid #ddd; /* Light grey border */
+            border-top: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="projects-tab">
+        <h2>Projects</h2>
+        <div class="tabs">
+            <button class="tab-link" onclick="openProject('ObesityPrediction')">Obesity Prediction</button>
+            <button class="tab-link" onclick="openProject('CarLoanEstimation')">Car Loan Price Estimation</button>
+            <button class="tab-link" onclick="openProject('ProcessAutomation')">Process Automation using AI</button>
+        </div>
+
+        <div id="ObesityPrediction" class="tab-content">
+            <h3>Obesity Prediction</h3>
+            <p>Description of the Obesity Prediction project.</p>
+        </div>
+
+        <div id="CarLoanEstimation" class="tab-content">
+            <h3>Car Loan Price Estimation</h3>
+            <p>Description of the Car Loan Price Estimation project.</p>
+        </div>
+
+        <div id="ProcessAutomation" class="tab-content">
+            <h3>Process Automation using AI</h3>
+            <p>Description of the Process Automation using AI project.</p>
+        </div>
+    </div>
+
+    <script>
+        function openProject(projectName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none"; // Hide all tab content by default
+            }
+            tablinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", ""); // Remove the "active" class from all tabs
+            }
+            document.getElementById(projectName).style.display = "block"; // Show the specific tab content
+            event.currentTarget.className += " active"; // Add "active" class to the current tab
+        }
+
+        // Optionally, open a specific tab by default when the page loads
+        window.onload = function() {
+            openProject('ObesityPrediction'); // Adjust as needed
+        };
+    </script>
+</body>
+</html>
+
