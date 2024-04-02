@@ -11,42 +11,55 @@
             height: 100%;
             overflow: hidden;
             font-family: Arial, sans-serif;
-            background: url('neuron.jpg') no-repeat center center fixed; /* Use your background image here */
+            background: url('neuron.jpg') no-repeat center center fixed;
             background-size: cover;
         }
 
         .container {
             position: absolute;
             top: 50%;
-            right: 20px;
+            left: 50%;
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             color: #333;
             z-index: 1;
-            transform: translateY(-50%);
-            text-align: right;
-            width: 30%;
-            max-width: 400px;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        .profile-photo {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-right: 20px;
+            vertical-align: middle;
         }
 
         h1, h2 {
             color: #007bff;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0; /* Removes default margin */
         }
 
         p, a, .tab {
             text-align: justify;
+            margin-top: 10px; /* Adds space above these elements */
         }
 
         a, .tab {
-            display: block;
+            display: inline-block;
             padding: 10px 20px;
             background-color: #007bff;
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
-            margin-top: 10px;
+            margin: 5px; /* Adds a little space around each link/tab */
         }
 
         audio {
@@ -57,12 +70,9 @@
 <body>
 
 <div class="container">
-    <h1>Welcome to My Website</h1>
-    <p>I am studying Information Systems as a MS graduate student at the University of Washington Foster School of Business. My passion lies in exploring AIML infrastructures and creating meaningful data visualizations. I thrive on diving into data, predicting social behaviors, evaluating health metrics, and tackling classification challenges.
-
-Check my website’s Visualization tab to experience the power of visual storytelling with data. The Projects tab gives you a sneak peek into the exciting endeavors I’ve been a part of, and the Blogs tab offers insights and reflections.
-
-Let’s embark on a journey through the fascinating intersection of information, tech, and data. Excited to have you along!</p>
+    <img src="pic.png" alt="Profile Photo" class="profile-photo">
+    <h1>About Me</h1>
+    <p>I am studying Information Systems as a MS graduate student at the University of Washington Foster School of Business. My passion lies in exploring AIML infrastructures and creating meaningful data visualizations. I thrive on diving into data, predicting social behaviors, evaluating health metrics, and tackling classification challenges.</p>
     
     <!-- Tabs for Projects, Data Visualization, and Blogs -->
     <div class="tabs-container">
@@ -71,6 +81,8 @@ Let’s embark on a journey through the fascinating intersection of information,
         <a href="blog.html" class="tab">Blog</a>
     </div>
 </div>
+
+
 
 </body>
 </html>
