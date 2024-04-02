@@ -69,10 +69,37 @@ h2 {
             <button class="tab-link" onclick="openProject('ProcessAutomation')">Process Automation using AI</button>
         </div>
 
-        <div id="ObesityPrediction" class="tab-content">
-            <h3>Obesity Prediction</h3>
-            <p>Description of the Obesity Prediction project.</p>
-        </div>
+ <div id="ObesityPrediction" class="tab-content">
+    <h3>Predicting Obesity Category</h3>
+    <p><strong>Goal of the Project:</strong> We used Data that was a mix of synthetic and authentic data collected from Colombia, Peru, and Mexico to predict obesity levels depending on some environmental and behavioral attributes. This analysis could enable a deeper understanding of obesity prevalence and expected incidence.</p>
+    <p>The data was obtained from <a href="https://archive.ics.uci.edu/ml/index.php" target="_blank">UC Irvine Machine Learning Repository</a> which can be accessed <a href="https://archive.ics.uci.edu/ml/datasets/Estimation+of+obesity+levels+based+on+eating+habits+and+physical+condition+" target="_blank">here</a>.</p>
+    <h4>Exploration and Data Cleaning</h4>
+    <p>23% of the data was collected online via survey, while the remaining 77% was generated synthetically using WEKA and SMOTE. Further data synthesis information can be found on the Repository site. This prior data cleaning and synthesis was really helpful in balancing out the attributes and controlling over-representation.</p>
+    <p><strong>Total Count = 2111</strong></p>
+    <p><strong>Independent Variables:</strong></p>
+    <ul>
+        <li>Eating Habits- Frequent consumption of high caloric food (FAVC), Frequency of consumption of vegetables (FCVC), Number of main meals (NCP), Consumption of food between meals (CAEC), Consumption of water daily (CH20), and Consumption of alcohol (CALC).</li>
+        <li>Physical Habits- Calories consumption monitoring (SCC), Physical activity frequency (FAF), Time using technology devices (TUE) Transportation used (MTRANS).</li>
+    </ul>
+    <p><strong>Other Variables:</strong> Gender, Age, Height, and Weight.</p>
+    <p><strong>Dependent Variable:</strong> [NObesity] was created with the values of: Insufficient Weight, Normal Weight, Overweight Level I, Overweight Level II, Obesity Type I, Obesity Type II, and Obesity Type III.</p>
+    
+    <h4>Body Mass Index (BMI) Calculation</h4>
+    <p>The Body Mass Index (BMI) is calculated as the weight in kilograms divided by the square of height in meters:</p>
+    <p><strong>BMI = Weight (kg) / Height (m)<sup>2</sup></strong></p>
+    <img src="path_to_your_BMI_formula_image.png" alt="BMI Formula">
+    
+    <h4>Visualization</h4>
+    <img src="/mnt/data/Create_an_image_that_visualizes_the_concept_of_ana.png" alt="Analyzing Obesity Levels Visualization">
+    <!-- Placeholder for video -->
+    <video width="320" height="240" controls>
+        <source src="path_to_your_video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p><em>Video visualization of data analysis and findings.</em></p>
+</div>
+
+
 
       <div id="CarLoanEstimation" class="tab-content">
     <h3>Car Loan Price Estimation</h3>
