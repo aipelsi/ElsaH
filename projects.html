@@ -90,12 +90,20 @@ h2 {
     <img src="bmi.jpg" alt="BMI Formula">
     
     <h4>Visualization</h4>
-    <img src="Method.jpg" alt="Analyzing Obesity Levels Visualization">
-    <!-- Placeholder for video -->
-    <video width="320" height="240" controls>
-        <source src="obesity.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    <img src="Method.jpg" alt="Analyzing Obesity Levels Visualization" class="responsive-media">
+
+<video width="320" height="240" controls class="responsive-media">
+    <source src="obesity.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+.responsive-media {
+    width: 100%; /* Adjust this to match the desired width or make it responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Display block to avoid inline gaps */
+    max-width: 600px; /* Example max-width, adjust as needed */
+    margin: auto; /* Center-align the media */
+}
+
     <p><em>Video visualization of data analysis and findings.</em></p>
 </div>
 
