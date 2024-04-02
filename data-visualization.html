@@ -76,130 +76,38 @@
   <button class="tablinks" onclick="openDashboard(event, 'Dashboard3')">Dashboard 3</button>
 </div>
 
-    <div id="City-of-Seattle-Recycling-and-Waste" class="tabcontent">
-        <p class="description">This dashboard provides insights into the City of Seattle's recycling and waste management performance over the years.</p>
-        <div class="tableauPlaceholder" id="viz1709066551669" style="position: relative">
-            <noscript>
-                <a href="#">
-                    <img alt="City of Seattle Recycling and Waste Journey to 70% Recycling (2000-2020)" src="https://public.tableau.com/static/images/Ci/CityofSeattleRecyclingandWaste_17060666254950/Dashboard2/1_rss.png" style="border: none" />
-                </a>
-            </noscript>
-            <object class="tableauViz" style="display:none;">
-                <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
-                <param name="embed_code_version" value="3" />
-                <param name="site_root" value="" />
-                <param name="name" value="CityofSeattleRecyclingandWaste_17060666254950/Dashboard2" />
-                <param name="tabs" value="no" />
-                <param name="toolbar" value="yes" />
-                <param name="static_image" value="https://public.tableau.com/static/images/Ci/CityofSeattleRecyclingandWaste_17060666254950/Dashboard2/1.png" />
-                <param name="animate_transition" value="yes" />
-                <param name="display_static_image" value="yes" />
-                <param name="display_spinner" value="yes" />
-                <param name="display_overlay" value="yes" />
-                <param name="display_count" value="yes" />
-                <param name="language" value="en-US" />
-            </object>
-        </div>
-        <script type="text/javascript">
-            var divElement = document.getElementById('viz1709066551669');
-            var vizElement = divElement.getElementsByTagName('object')[0];
-            vizElement.style.display = 'block';
-            if (divElement.offsetWidth > 800) {
-                vizElement.style.width='1100px';vizElement.style.height='927px';
-            } else if (divElement.offsetWidth > 500) {
-                vizElement.style.width='1100px';vizElement.style.height='927px';
-            } else {
-                vizElement.style.width='100%';vizElement.style.height='1527px';
-            }
-            var scriptElement = document.createElement('script');
-            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-            vizElement.parentNode.insertBefore(scriptElement, vizElement);
-        </script>
-    </div>
-
-    <div id="Dashboard2" class="tabcontent">
-        <p class="description">This dashboard provides a market analysis of Airbnb listings in West Seattle.</p>
-        <div class="tableauPlaceholder" id="viz1709070946984" style="position: relative">
-            <noscript>
-                <a href="#">
-                    <img alt="Airbnb Market Analysis: West Seattle 1br, 98126" src="https://public.tableau.com/static/images/Ai/AirbnbMarketAnalysisforWestSeattle1BR/Dashboard1/1_rss.png" style="border: none" />
-                </a>
-            </noscript>
-            <object class="tableauViz" style="display:none;">
-                <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
-                <param name="embed_code_version" value="3" />
-                <param name="site_root" value="" />
-                <param name="name" value="AirbnbMarketAnalysisforWestSeattle1BR/Dashboard1" />
-                <param name="tabs" value="no" />
-                <param name="toolbar" value="yes" />
-                <param name="static_image" value="https://public.tableau.com/static/images/Ai/AirbnbMarketAnalysisforWestSeattle1BR/Dashboard1/1.png" />
-                <param name="animate_transition" value="yes" />
-                <param name="display_static_image" value="yes" />
-                <param name="display_spinner" value="yes" />
-                <param name="display_overlay" value="yes" />
-                <param name="display_count" value="yes" />
-                <param name="language" value="en-US" />
-            </object>
-        </div>
-        <script type="text/javascript">
-            var divElement = document.getElementById('viz1709070946984');
-            var vizElement = divElement.getElementsByTagName('object')[0];
-            vizElement.style.display = 'block';
-            if (divElement.offsetWidth > 800) {
-                vizElement.style.width='1100px';vizElement.style.height='927px';
-            } else if (divElement.offsetWidth > 500) {
-                vizElement.style.width='1100px';vizElement.style.height='927px';
-            } else {
-                vizElement.style.width='100%';vizElement.style.height='1527px';
-            }
-            var scriptElement = document.createElement('script');
-            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-            vizElement.parentNode.insertBefore(scriptElement, vizElement);
-        </script>
-    </div>
-
-    <!-- Add more dashboard containers here as needed, following the same structure -->
-
-    <script>
-        function openDashboard(evt, dashboardName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(dashboardName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
- 
-    <script>
-function openDashboard(evt, dashboardName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(dashboardName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-
-// Automatically open the first dashboard when the page loads
-window.onload = function() {
-    openDashboard(new Event('click'), 'City-of-Seattle-Recycling-and-Waste');
-};
-</script>
-
-</body>
-</html>
-
+<div id="City-of-Seattle-Recycling-and-Waste" class="tabcontent">
+    <p class="description">This dashboard provides insights into the City of Seattle's recycling and waste management performance over the years.</p>
+    <!-- Embed code and setup for Tableau dashboard -->
 </div>
+
+<div id="Dashboard2" class="tabcontent">
+    <p class="description">This dashboard provides a market analysis of Airbnb listings in West Seattle.</p>
+    <!-- Embed code and setup for Tableau dashboard -->
+</div>
+
+<!-- Placeholder for Dashboard3, similar to the above -->
+
+<script>
+    function openDashboard(evt, dashboardName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(dashboardName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Automatically open the first dashboard when the page loads
+    window.onload = function() {
+        document.getElementsByClassName('tablinks')[0].click();
+    };
+</script>
 
 </body>
 </html>
