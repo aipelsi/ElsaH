@@ -57,7 +57,13 @@ h2 {
     color: #333; /* Ensuring text color is dark for contrast */
     text-shadow: 1px 1px 2px rgba(255,255,255,0.7); /* Optional: text shadow for improved legibility */
 }
-
+.responsive-media {
+    width: 100%; /* Make the media responsive */
+    max-width: 600px; /* Maximum width of the media */
+    height: auto; /* Adjust the height automatically */
+    display: block; /* Display block to fill the width of its container */
+    margin: auto; /* Center the media horizontally */
+}
     </style>
 </head>
 <body>
@@ -97,15 +103,7 @@ h2 {
     Your browser does not support the video tag.
 </video>
 
-.responsive-media {
-    width: 100%; /* Adjust this to match the desired width or make it responsive */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Display block to avoid inline gaps */
-    max-width: 600px; /* Example max-width, adjust as needed */
-    margin: auto; /* Center-align the media */
-}
-
-    <p><em>Video visualization of data analysis and findings.</em></p>
+  <p><em>Video visualization of data analysis and findings.</em></p>
 </div>
 
 
@@ -160,7 +158,7 @@ h2 {
         </div>
     </div>
 
-    <script>
+     <script>
         function openProject(projectName) {
             var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("tab-content");
@@ -172,7 +170,8 @@ h2 {
                 tablinks[i].className = tablinks[i].className.replace(" active", ""); // Remove the "active" class from all tabs
             }
             document.getElementById(projectName).style.display = "block"; // Show the specific tab content
-            event.currentTarget.className += " active"; // Add "active" class to the current tab
+            var currentTab = event.currentTarget || document.querySelector('.tab-link'); // Fallback to first tab if event.currentTarget is not available
+            currentTab.className += " active"; // Add "active" class to the current tab
         }
 
         // Optionally, open a specific tab by default when the page loads
@@ -182,4 +181,3 @@ h2 {
     </script>
 </body>
 </html>
-
