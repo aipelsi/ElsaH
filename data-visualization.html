@@ -7,14 +7,14 @@
             height: 100%;
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #eaeaea; /* Light background for better visibility */
+            background-color: #eaeaea;
         }
 
         .header {
             text-align: center;
             padding: 50px;
             font-size: 40px;
-            color: #333; /* Dark text for contrast */
+            color: #333;
         }
 
         .tab {
@@ -48,28 +48,29 @@
             padding: 6px 12px;
             border: 1px solid #ccc;
             border-top: none;
-            text-align: center; /* Center the content */
+            text-align: center;
         }
 
         .dashboard-container {
             position: relative;
             width: 100%;
-            padding-top: 56.25%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
             height: 0;
         }
 
-        .tableauViz {
+        .iframeViz {
             position: absolute;
             top: 0;
             left: 0;
-            width: 100% !important;
-            height: 100% !important;
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
 <body>
 
 <div class="header">Tableau Dashboard</div>
+
 <div class="tab">
   <button class="tablinks" onclick="openDashboard(event, 'City-of-Seattle-Recycling-and-Waste')">Dashboard 1</button>
   <button class="tablinks" onclick="openDashboard(event, 'Dashboard2')">Dashboard 2</button>
@@ -78,15 +79,17 @@
 
 <div id="City-of-Seattle-Recycling-and-Waste" class="tabcontent">
     <p class="description">This dashboard provides insights into the City of Seattle's recycling and waste management performance over the years.</p>
-    <div class='tableauPlaceholder' id='viz1712099690639' style='position: relative'><noscript><a href='#'><img alt='City of Seattle Recycling and WasteJourney to 70% Recycling (2000-2020) ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ci&#47;CityofSeattleRecyclingandWaste_17060666254950&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='CityofSeattleRecyclingandWaste_17060666254950&#47;Dashboard2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ci&#47;CityofSeattleRecyclingandWaste_17060666254950&#47;Dashboard2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1712099690639');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1100px';vizElement.style.height='927px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1100px';vizElement.style.height='927px';} else { vizElement.style.width='100%';vizElement.style.height='1527px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    <div class="dashboard-container">
+        <iframe class="iframeViz" src="https://public.tableau.com/views/CityofSeattleRecyclingandWaste_17060666254950/Dashboard2?:language=en-US&:display_count=n&:origin=viz_share_link" frameborder="0" allowfullscreen></iframe>
+    </div>
 </div>
 
 <div id="Dashboard2" class="tabcontent">
     <p class="description">This dashboard provides a market analysis of Airbnb listings in West Seattle.</p>
-    <!-- Embed code and setup for Tableau dashboard -->
+    <!-- You can embed another dashboard following the same structure as above -->
 </div>
 
-<!-- Placeholder for Dashboard3, similar to the above -->
+<!-- Placeholder for Dashboard3 -->
 
 <script>
     function openDashboard(evt, dashboardName) {
@@ -99,15 +102,4 @@
         for (i = 0; i < tablinks.length; i++) {
             tablinks[i].className = tablinks[i].className.replace(" active", "");
         }
-        document.getElementById(dashboardName).style.display = "block";
-        evt.currentTarget.className += " active";
-    }
-
-    // Automatically open the first dashboard when the page loads
-    window.onload = function() {
-        document.getElementsByClassName('tablinks')[0].click();
-    };
-</script>
-
-</body>
-</html>
+        document.getElementById(dashboardName
