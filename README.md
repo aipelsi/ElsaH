@@ -12,43 +12,31 @@
             font-family: Arial, sans-serif;
             background: url('neuron.jpg') no-repeat center center fixed;
             background-size: cover;
-            overflow-x: hidden; /* Prevents horizontal scroll */
         }
 
         .container {
-            position: relative; /* Changed from absolute for better responsiveness */
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             color: #333;
-            margin: auto; /* Centers the container on smaller screens */
+            margin: 20px auto; /* Centering the container */
             text-align: center;
             width: 80%;
-            max-width: 800px; /* Keeps container width under control on larger screens */
-            transform: translateY(-50%); /* Vertically centers the container */
-            top: 50%; /* Works with transform to vertically center */
+            max-width: 800px;
         }
 
         .profile-photo {
             border-radius: 50%;
-            width: 50%; /* Adjust based on preference */
-            max-width: 200px; /* Ensures the image does not become too large */
-            height: auto; /* Maintains aspect ratio */
-            margin: 20px auto; /* Centers the image and adds spacing */
-            display: block; /* Treats the image as a block for centering purposes */
+            width: 200px; /* Maintains a fixed width */
+            height: 200px;
+            object-fit: cover;
+            display: block; /* For centering */
+            margin: 20px auto; /* Adds margin on top and bottom, and auto centers horizontally */
         }
 
-        h1, h2 {
-            color: #007bff;
-            display: block; /* Each heading takes its own line */
-            margin: 0 auto; /* Centers headings */
-            padding: 5px; /* Adds some padding for spacing */
-        }
-
-        p, a, .tab {
-            text-align: justify;
-            margin-top: 10px;
+        h1, h2, p, a, .tab {
+            margin: 10px 0; /* Adds margin to top and bottom for spacing */
         }
 
         a, .tab {
@@ -59,17 +47,40 @@
             text-decoration: none;
             border-radius: 5px;
             margin: 5px;
-            width: auto; /* Allows the button to adjust based on text length */
         }
 
-        /* Responsive adjustments */
-        @media (max-width: 600px) {
-            .profile-photo {
-                width: 70%; /* Makes the photo larger on smaller screens */
+        /* Styles for larger screens */
+        @media (min-width: 1024px) {
+            .container {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 60%; /* Adjusted for desktop */
             }
 
-            h1, h2, p, .tab {
-                font-size: 90%; /* Reduces font size for small devices */
+            .profile-photo, h1, h2, p, a, .tab {
+                font-size: 100%;
+            }
+        }
+
+        /* Styles for smaller screens */
+        @media (max-width: 1023px) {
+            body, html {
+                overflow-x: hidden; /* Prevents horizontal scrolling on smaller screens */
+            }
+
+            .container {
+                position: static;
+                transform: none;
+                top: auto;
+                left: auto;
+                width: 90%; /* More width for smaller screens */
+            }
+
+            .profile-photo {
+                width: 150px; /* Smaller photo on smaller screens */
+                height: 150px;
             }
         }
     </style>
@@ -85,7 +96,6 @@
 
     <p>Let’s embark on a journey through the fascinating intersection of information, tech, and data. Excited to have you along!</p>
 
-    <!-- Tabs for Projects, Data Visualization, and Blogs -->
     <div class="tabs-container">
         <a href="projects.html" class="tab">Projects</a>
         <a href="data-visualization.html" class="tab">Data Visualization</a>
@@ -95,4 +105,5 @@
 
 </body>
 </html>
+
 
