@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -78,7 +78,7 @@
 
 <p>Let’s embark on a journey through the fascinating intersection of information, tech, and data. Excited to have you along!</p>
 
- </p>
+
     
     <!-- Tabs for Projects, Data Visualization, and Blogs -->
     <div class="tabs-container">
