@@ -1,4 +1,5 @@
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -33,8 +34,8 @@
 
         .profile-photo {
             border-radius: 50%;
-            width: 100px;
-            height: 100px;
+            width: 200px; /* Changed from 100px to 200px */
+            height: 200px; /* Changed from 100px to 200px */
             object-fit: cover;
             margin-right: 20px;
             vertical-align: middle;
@@ -78,8 +79,6 @@
 
 <p>Let’s embark on a journey through the fascinating intersection of information, tech, and data. Excited to have you along!</p>
 
-
-    
     <!-- Tabs for Projects, Data Visualization, and Blogs -->
     <div class="tabs-container">
         <a href="projects.html" class="tab">Projects</a>
@@ -87,8 +86,6 @@
         <a href="blog.html" class="tab">Blog</a>
     </div>
 </div>
-
-
 
 </body>
 </html>
