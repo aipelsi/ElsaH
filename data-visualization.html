@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Interactive Dashboards</title>
-     <style>
+    <style>
         body, html {
             margin: 0;
             padding: 0;
@@ -14,79 +14,80 @@
             -o-background-size: cover;
             background-size: cover;
         }
-
+        
         .projects-tab {
-            text-align: center; /* Center-align the content */
+            text-align: center;
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.9); /* Increased opacity for better readability */
-            margin: auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 20px auto;
             width: 80%;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            position: relative; /* Allows absolute positioning of the back-link inside it */
+            position: relative;
         }
-
+        
         h2 {
-            font-size: 36px; /* Big size for the title */
-            color: #333; /* Dark text color for better readability */
+            font-size: 36px;
+            color: #333;
         }
-
+        
         .tab-link, .back-link {
             background-color: #f9f9f9;
             border: none;
             outline: none;
             cursor: pointer;
             padding: 14px 20px;
-            font-size: 20px; /* Made it bigger */
+            font-size: 20px;
             transition: background-color 0.3s;
-            text-decoration: none; /* Removes underline from back-link */
-            color: #333; /* Text color for the link */
-            border-radius: 5px; /* Rounded corners for the link */
-            display: inline-block; /* Needed to apply padding and margins */
-            margin-right: 10px; /* Spacing between back link and tab links */
+            text-decoration: none;
+            color: #333;
+            border-radius: 5px;
+            display: inline-block;
+            margin-right: 10px;
         }
-
+        
         .back-link {
-            background-color: #007bff; /* Blue background for distinction */
-            color: #ffffff; /* White text */
-            position: absolute; /* Position it inside .projects-tab */
-            top: 10px; /* Position at the top inside the container */
-            left: 10px; /* Align to the left inside the container */
+            background-color: #007bff;
+            color: #ffffff;
+            position: absolute;
+            top: 10px;
+            left: 10px;
         }
-
-        .back-link:hover {
-            background-color: #0056b3; /* Darker blue on hover */
+        
+        .back-link:hover, .tab-link:hover {
+            background-color: #0056b3;
         }
-
-        .tab-link:hover {
-            background-color: #ddd; /* Light grey background on hover */
-        }
-
+        
         .tab-link.active {
-            background-color: #ccc; /* Slightly darker grey for the active tab */
+            background-color: #ccc;
         }
-
-        .tab-content {
-            display: none; /* Hide content by default */
+        
+        .tabcontent {
+            display: none;
             padding: 20px;
-            border: 1px solid #ddd; /* Light grey border */
-            border-top: none;
-            font-size: 18px; /* Increased font size for better readability */
-            color: #333; /* Ensuring text color is dark for contrast */
+            border: 1px solid #ddd;
+            font-size: 18px;
+            color: #333;
+        }
+        
+        .header {
+            text-align: center;
+            font-size: 24px;
+            color: white;
+            padding: 10px;
         }
     </style>
 </head>
 <body>
 
-<div class="header">Tableau Dashboard</div>
-
-<div class="tab">
-     <!-- Back Link inside the projects tab -->
+<div class="projects-tab">
+    <div class="header">Tableau Dashboard</div>
+    <div class="tab">
+        <!-- Back Link inside the projects tab -->
         <a href="https://aipelsi.github.io/ElsaH/" class="back-link">Back</a>
-  <button class="tablinks" onclick="openDashboard(event, 'City-of-Seattle-Recycling-and-Waste')">Dashboard 1</button>
-  <button class="tablinks" onclick="openDashboard(event, 'Dashboard2')">Dashboard 2</button>
-    
-</div>
+        <button class="tab-link" onclick="openDashboard(event, 'City-of-Seattle-Recycling-and-Waste')">Dashboard 1</button>
+        <button class="tab-link" onclick="openDashboard(event, 'Dashboard2')">Dashboard 2</button>
+    </div>
 
 <div id="City-of-Seattle-Recycling-and-Waste" class="tabcontent">
     <p class="description">This dashboard provides insights into the City of Seattle's recycling and waste management performance over the years.</p>
