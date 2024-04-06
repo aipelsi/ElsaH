@@ -19,18 +19,13 @@
             text-align: center;
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.9);
-            margin: auto;
-            width: 80%;
+            margin: 20px auto;
+            width: 80%; /* Adjust width for better spacing */
+            max-width: 960px; /* Max width to prevent too wide on large screens */
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             color: #333;
-            position: relative; /* Allows positioning inside */
-        }
-
-        .header {
-            font-size: 24px;
-            color: #333;
-            margin-bottom: 10px; /* Adds some space below the header */
+            position: relative;
         }
 
         .tab-link, .back-link {
@@ -38,14 +33,13 @@
             border: none;
             outline: none;
             cursor: pointer;
-            padding: 14px 20px;
-            font-size: 20px;
+            padding: 10px 15px;
+            font-size: 16px; /* Adjust font size for clarity */
             transition: background-color 0.3s;
             text-decoration: none;
             color: #333;
             border-radius: 5px;
-            display: inline-block;
-            margin-right: 10px;
+            margin: 5px 0; /* Adjust margin for spacing */
         }
 
         .back-link {
@@ -60,25 +54,28 @@
             background-color: #0056b3;
         }
 
-        .tab-link.active {
-            background-color: #ccc;
-        }
-
         .tabcontent {
             display: none;
-            font-size: 18px;
-            color: #333;
-            width: 80%;
-            margin: 20px auto; /* Centers the content and adds vertical spacing */
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-top: none;
         }
 
-        /* Specific styles for Tableau embeddings */
+        /* Responsive embedding for Tableau dashboards */
         .tableauPlaceholder {
-            position: relative;
             width: 100%;
-            max-width: 1100px; /* Adjust based on your preference */
-            height: 927px; /* Adjust based on the height of your Tableau dashboard */
-            margin: 0 auto; /* Centers the dashboard */
+            height: auto; /* Adjust height automatically */
+        }
+
+        iframe {
+            width: 100% !important;
+            height: 600px; /* Fixed height, or consider using aspect-ratio for responsiveness */
+        }
+
+        @media screen and (max-width: 768px) {
+            iframe {
+                height: 400px; /* Shorter height on smaller screens */
+            }
         }
     </style>
 </head>
@@ -87,7 +84,6 @@
 <div class="header">Tableau Dashboard</div>
 
 <div class="tab">
-    <!-- Back Link -->
     <a href="https://aipelsi.github.io/ElsaH/" class="back-link">Back</a>
     <button class="tab-link" onclick="openDashboard(event, 'City-of-Seattle-Recycling-and-Waste')">Dashboard 1</button>
     <button class="tab-link" onclick="openDashboard(event, 'Dashboard2')">Dashboard 2</button>
