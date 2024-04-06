@@ -1,98 +1,94 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elsa Hagos Portfolio</title>
+    <title>Content Page</title>
     <style>
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
             overflow: hidden;
+            font-family: Arial, sans-serif;
+            background: url('neuron.jpg') no-repeat center center fixed;
+            background-size: cover;
         }
-        .video-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -100;
-            overflow: hidden;
-        }
-        .video-background video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            -o-object-fit: cover;
-        }
-        .content {
-            position: relative;
-            z-index: 100;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        header, .container, footer {
-            padding: 20px;
-            margin: 20px auto;
-        }
+
         .container {
-            max-width: 800px;
-            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            color: #333;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 80%;
+            max-width: 800px;
         }
-        .about-me, .projects {
+
+        .profile-photo {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-right: 20px;
+            vertical-align: middle;
+        }
+
+        h1, h2 {
+            color: #007bff;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0; /* Removes default margin */
+        }
+
+        p, a, .tab {
             text-align: justify;
-            margin-bottom: 20px;
+            margin-top: 10px; /* Adds space above these elements */
         }
-        .projects a {
+
+        a, .tab {
             display: inline-block;
             padding: 10px 20px;
             background-color: #007bff;
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
-            margin-right: 10px;
+            margin: 5px; /* Adds a little space around each link/tab */
+        }
+
+        audio {
+            display: none;
         }
     </style>
 </head>
 <body>
 
-<div class="video-background">
-    <video autoplay loop muted>
-        <source src="space.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-</div>
+<div class="container">
+    <img src="pic.png" alt="Profile Photo" class="profile-photo">
+    <h1>Elsa Hagos</h1>
+    <p>I am studying Information Systems as a graduate student at the University of Washington Foster School of Business. My passion lies in exploring AIML infrastructures and creating meaningful data visualizations. I thrive on diving into data, predicting social behaviors, evaluating health metrics, and tackling classification challenges.</p>
 
-<div class="content">
-    <header>
-        <h1>Elsa Hagos Portfolio</h1>
-    </header>
+<p>Check out my website’s Visualization tab to experience the power of visual storytelling with data. The Projects tab gives you a sneak peek into the exciting endeavors I’ve been a part of, and the Blogs tab offers insights and reflections.</p>
 
-    <div class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <div class="about-me">
-                <p>I am studying Information Systems as a MS graduate student at the University of Washington Foster School of Business. My passion lies in exploring AIML infrastructures and creating meaningful data visualizations. I thrive on diving into data, predicting social behaviors, evaluating health metrics, and tackling classification challenges.</p>
-                <p>Check my website’s Visualization tab to experience the power of visual storytelling with data. The Projects tab gives you a sneak peek into the exciting endeavors I’ve been a part of, and the Blogs tab offers insights and reflections.</p>
-                <p>Let’s embark on a journey through the fascinating intersection of information, tech, and data. Excited to have you along!</p>
-            </div>
-        </section>
+<p>Let’s embark on a journey through the fascinating intersection of information, tech, and data. Excited to have you along!</p>
 
-        <section class="projects">
-            <h2>Projects</h2>
-            <a href="content.html">Content</a>
-        </section>
+ </p>
+    
+    <!-- Tabs for Projects, Data Visualization, and Blogs -->
+    <div class="tabs-container">
+        <a href="projects.html" class="tab">Projects</a>
+        <a href="data-visualization.html" class="tab">Data Visualization</a>
+        <a href="blog.html" class="tab">Blog</a>
     </div>
-
-    <footer>
-        <p>&copy; 2024 Elsa Hagos</p>
-    </footer>
 </div>
+
+
 
 </body>
 </html>
-
