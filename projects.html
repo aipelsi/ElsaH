@@ -4,76 +4,88 @@
     <title>Portfolio</title>
     <style>
         body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    background: url("neuron.jpg") no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background: url("neuron.jpg") no-repeat center center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
 
-.projects-tab {
-    text-align: center; /* Center-align the content */
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Increased opacity for better readability */
-    margin: auto;
-    width: 80%;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+        .projects-tab {
+            text-align: center; /* Center-align the content */
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Increased opacity for better readability */
+            margin: auto;
+            width: 80%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-h2 {
-    font-size: 36px; /* Big size for the title */
-    color: #333; /* Dark text color for better readability */
-}
+        h2 {
+            font-size: 36px; /* Big size for the title */
+            color: #333; /* Dark text color for better readability */
+        }
 
-.tab-link {
-    background-color: #f9f9f9;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 20px;
-    font-size: 17px;
-    transition: background-color 0.3s;
-}
+        .tab-link {
+            background-color: #f9f9f9;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 20px;
+            font-size: 17px;
+            transition: background-color 0.3s;
+        }
 
-.tab-link:hover {
-    background-color: #ddd; /* Light grey background on hover */
-}
+        .tab-link:hover {
+            background-color: #ddd; /* Light grey background on hover */
+        }
 
-.tab-link.active {
-    background-color: #ccc; /* Slightly darker grey for the active tab */
-}
+        .tab-link.active {
+            background-color: #ccc; /* Slightly darker grey for the active tab */
+        }
 
-.tab-content {
-    display: none; /* Hide content by default */
-    padding: 20px;
-    border: 1px solid #ddd; /* Light grey border */
-    border-top: none;
-    font-size: 18px; /* Increased font size for better readability */
-    color: #333; /* Ensuring text color is dark for contrast */
-    text-shadow: 1px 1px 2px rgba(255,255,255,0.7); /* Optional: text shadow for improved legibility */
-}
-.responsive-media {
-    width: 100%; /* Make the media responsive */
-    max-width: 600px; /* Maximum width of the media */
-    height: auto; /* Adjust the height automatically */
-    display: block; /* Display block to fill the width of its container */
-    margin: auto; /* Center the media horizontally */
-}
+        .tab-content {
+            display: none; /* Hide content by default */
+            padding: 20px;
+            border: 1px solid #ddd; /* Light grey border */
+            border-top: none;
+            font-size: 18px; /* Increased font size for better readability */
+            color: #333; /* Ensuring text color is dark for contrast */
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.7); /* Optional: text shadow for improved legibility */
+        }
+
+        .back-link {
+            position: absolute; /* Position it relative to the nearest positioned ancestor or to the body */
+            top: 10px; /* 10px from the top */
+            left: 10px; /* 10px from the left */
+            padding: 10px 20px; /* Padding for size */
+            background-color: #007bff; /* Blue background */
+            color: #ffffff; /* White text */
+            text-decoration: none; /* No underline */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 17px; /* Matching font size of tab links */
+            transition: background-color 0.3s; /* Smooth background color change on hover */
+        }
+
+        .back-link:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
     </style>
 </head>
 <body>
+    <!-- Back Link at the top left -->
+    <a href="https://aipelsi.github.io/ElsaH/" class="back-link">Back</a>
+
     <div class="projects-tab">
         <h2>Projects</h2>
         <div class="tabs">
             <button class="tab-link" onclick="openProject('ObesityPrediction')">Obesity Prediction</button>
             <button class="tab-link" onclick="openProject('CarLoanEstimation')">Car Loan Price Estimation</button>
             <button class="tab-link" onclick="openProject('ProcessAutomation')">Process Automation using AI</button>
-            <a href="https://aipelsi.github.io/ElsaH/" class="tab-link">Back</a>
         </div>
 
  <div id="ObesityPrediction" class="tab-content">
