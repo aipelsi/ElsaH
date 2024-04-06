@@ -23,6 +23,7 @@
             width: 80%;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative; /* Allows absolute positioning of the back-link inside it */
         }
 
         h2 {
@@ -30,14 +31,31 @@
             color: #333; /* Dark text color for better readability */
         }
 
-        .tab-link {
+        .tab-link, .back-link {
             background-color: #f9f9f9;
             border: none;
             outline: none;
             cursor: pointer;
             padding: 14px 20px;
-            font-size: 17px;
+            font-size: 20px; /* Made it bigger */
             transition: background-color 0.3s;
+            text-decoration: none; /* Removes underline from back-link */
+            color: #333; /* Text color for the link */
+            border-radius: 5px; /* Rounded corners for the link */
+            display: inline-block; /* Needed to apply padding and margins */
+            margin-right: 10px; /* Spacing between back link and tab links */
+        }
+
+        .back-link {
+            background-color: #007bff; /* Blue background for distinction */
+            color: #ffffff; /* White text */
+            position: absolute; /* Position it inside .projects-tab */
+            top: 10px; /* Position at the top inside the container */
+            left: 10px; /* Align to the left inside the container */
+        }
+
+        .back-link:hover {
+            background-color: #0056b3; /* Darker blue on hover */
         }
 
         .tab-link:hover {
@@ -55,32 +73,15 @@
             border-top: none;
             font-size: 18px; /* Increased font size for better readability */
             color: #333; /* Ensuring text color is dark for contrast */
-            text-shadow: 1px 1px 2px rgba(255,255,255,0.7); /* Optional: text shadow for improved legibility */
         }
 
-        .back-link {
-            position: absolute; /* Position it relative to the nearest positioned ancestor or to the body */
-            top: 10px; /* 10px from the top */
-            left: 10px; /* 10px from the left */
-            padding: 10px 20px; /* Padding for size */
-            background-color: #007bff; /* Blue background */
-            color: #ffffff; /* White text */
-            text-decoration: none; /* No underline */
-            border-radius: 5px; /* Rounded corners */
-            font-size: 17px; /* Matching font size of tab links */
-            transition: background-color 0.3s; /* Smooth background color change on hover */
-        }
-
-        .back-link:hover {
-            background-color: #0056b3; /* Darker blue on hover */
-        }
     </style>
 </head>
 <body>
-    <!-- Back Link at the top left -->
-    <a href="https://aipelsi.github.io/ElsaH/" class="back-link">Back</a>
 
     <div class="projects-tab">
+        <!-- Back Link inside the projects tab -->
+        <a href="https://aipelsi.github.io/ElsaH/" class="back-link">Back</a>
         <h2>Projects</h2>
         <div class="tabs">
             <button class="tab-link" onclick="openProject('ObesityPrediction')">Obesity Prediction</button>
