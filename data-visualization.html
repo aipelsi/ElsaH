@@ -54,17 +54,21 @@
             background-color: #0056b3;
         }
 
-        .tabcontent {
+         .tabcontent {
             display: none;
             padding: 20px;
             border: 1px solid #ddd;
             border-top: none;
+            margin: 0 auto; /* Ensures margin is auto to center it */
+            text-align: center; /* Centers the text */
+            width: 80%; /* Adjust width as needed */
+            max-width: 1100px; /* Max width for large screens, adjust as needed */
         }
-
         /* Responsive embedding for Tableau dashboards */
-        .tableauPlaceholder {
+         .tableauPlaceholder {
             width: 100%;
-            height: auto; /* Adjust height automatically */
+            height: auto;
+            margin: 0 auto; /* Center the placeholder */
         }
 
         iframe {
