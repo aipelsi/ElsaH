@@ -20,8 +20,8 @@
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.9);
             margin: 20px auto;
-            width: 80%; /* Adjust width for better spacing */
-            max-width: 960px; /* Max width to prevent too wide on large screens */
+            width: 80%;
+            max-width: 960px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             color: #333;
@@ -35,12 +35,12 @@
             outline: none;
             cursor: pointer;
             padding: 10px 15px;
-            font-size: 16px; /* Adjust font size for clarity */
+            font-size: 16px;
             transition: background-color 0.3s;
             text-decoration: none;
             color: #333;
             border-radius: 5px;
-            margin: 5px 0; /* Adjust margin for spacing */
+            margin: 5px 0;
             font-weight: bold;
         }
 
@@ -56,31 +56,32 @@
             background-color: #0056b3;
         }
 
-         .tabcontent {
+        .tabcontent {
             display: none;
             padding: 20px;
             border: 1px solid #ddd;
             border-top: none;
-            margin: 0 auto; /* Ensures margin is auto to center it */
-            text-align: center; /* Centers the text */
-            width: 80%; /* Adjust width as needed */
-            max-width: 1100px; /* Max width for large screens, adjust as needed */
+            margin: 0 auto;
+            text-align: center;
+            width: 80%;
+            max-width: 1100px;
         }
-        /* Responsive embedding for Tableau dashboards */
-         .tableauPlaceholder {
+
+        .tableauPlaceholder, .dashboard3Placeholder {
             width: 100%;
             height: auto;
-            margin: 0 auto; /* Center the placeholder */
+            margin: 0 auto;
         }
 
         iframe {
             width: 100% !important;
-            height: 600px; /* Fixed height, or consider using aspect-ratio for responsiveness */
+            height: auto;
+            min-height: 600px;
         }
 
         @media screen and (max-width: 768px) {
             iframe {
-                height: 400px; /* Shorter height on smaller screens */
+                min-height: 400px;
             }
         }
     </style>
@@ -188,18 +189,8 @@
             <param name='language' value='en-US' />
         </object>
     </div>
-    <script type='text/javascript'>
-        var divElement = document.getElementById('viz1712631336199');
-        var vizElement = divElement.getElementsByTagName('object')[0];
-        if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1300px';vizElement.style.height='1027px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1300px';vizElement.style.height='1027px';} else { vizElement.style.width='100%';vizElement.style.height='1327px';}
-        var scriptElement = document.createElement('script');
-        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-        vizElement.parentNode.insertBefore(scriptElement, vizElement);
-    </script>
-</div>
-
-
-<script>
+<div>
+    <script>
     function openDashboard(evt, dashboardName) {
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");
