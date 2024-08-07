@@ -10,6 +10,7 @@
             padding: 0;
             height: 100%;
             font-family: Arial, sans-serif;
+             font-size: 16px; /* Increased font size */
             background: url('neuron.jpg') no-repeat center center fixed;
             background-size: cover;
         }
