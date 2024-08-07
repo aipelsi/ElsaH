@@ -29,7 +29,17 @@
             color: #333;
         }
 
+        h2 {
+            font-size: 28px;
+            color: #333;
+        }
+
         p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        ul {
             font-size: 18px;
             color: #555;
         }
@@ -42,30 +52,70 @@
         a:hover {
             text-decoration: underline;
         }
+
+        .responsive-media {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
     <div class="content">
         <a href="index.html" class="back-link">Back to Projects</a>
-        <h1>Predicting Obesity Category</h1>
-        <p><strong>Goal of the Project:</strong> We used data that was a mix of synthetic and authentic data collected from Colombia, Peru, and Mexico to predict obesity levels depending on some environmental and behavioral attributes. This analysis could enable a deeper understanding of obesity prevalence and expected incidence.</p>
-        <p>The data was obtained from <a href="https://archive.ics.uci.edu/ml/index.php" target="_blank">UC Irvine Machine Learning Repository</a> which can be accessed <a href="https://archive.ics.uci.edu/ml/datasets/Estimation+of+obesity+levels+based+on+eating+habits+and+physical+condition+" target="_blank">here</a>.</p>
-        <h2>Exploration and Data Cleaning</h2>
-        <p>23% of the data was collected online via survey, while the remaining 77% was generated synthetically using WEKA and SMOTE. Further data synthesis information can be found on the Repository site. This prior data cleaning and synthesis was really helpful in balancing out the attributes and controlling over-representation.</p>
-        <p><strong>Total Count = 2111</strong></p>
-        <p><strong>Independent Variables:</strong></p>
+        <h1>Understanding and Addressing Obesity: A Data-Driven Approach</h1>
+
+        <p><strong>Introduction</strong></p>
+        <p>Obesity is a growing global concern with significant health implications. By leveraging advanced machine learning models, our project aims to understand and address the impacts of obesity on the population. This blog delves into how we use data and technology to comprehend and predict obesity trends and integrate these insights into practical health initiatives.</p>
+
+        <h2>Data Collection</h2>
+        <p>Our project utilizes a diverse dataset collected from Mexico, Peru, and Colombia. This dataset includes 17 attributes that encompass various aspects of eating habits, physical activity, and other lifestyle factors. Attributes such as gender, age, height, weight, family history of obesity, consumption habits, and physical activity levels provide a comprehensive view of the factors influencing obesity.</p>
+
+        <h2>Data Preprocessing</h2>
+        <p>Before diving into model building, we meticulously preprocess the data to ensure quality and accuracy. Key steps include:</p>
         <ul>
-            <li>Eating Habits- Frequent consumption of high caloric food (FAVC), Frequency of consumption of vegetables (FCVC), Number of main meals (NCP), Consumption of food between meals (CAEC), Consumption of water daily (CH20), and Consumption of alcohol (CALC).</li>
-            <li>Physical Habits- Calories consumption monitoring (SCC), Physical activity frequency (FAF), Time using technology devices (TUE) Transportation used (MTRANS).</li>
+            <li><strong>Removing Duplicate Rows:</strong> Eliminating duplicate entries to prevent distortion in analysis.</li>
+            <li><strong>Converting Categorical Values:</strong> Smoothing regression modeling by converting non-integer values into integers.</li>
+            <li><strong>Handling Missing Values:</strong> Removing rows with missing data points to maintain consistency.</li>
         </ul>
-        <p><strong>Other Variables:</strong> Gender, Age, Height, and Weight.</p>
-        <p><strong>Dependent Variable:</strong> [NObesity] was created with the values of: Insufficient Weight, Normal Weight, Overweight Level I, Overweight Level II, Obesity Type I, Obesity Type II, and Obesity Type III.</p>
-        <h2>Body Mass Index (BMI) Calculation</h2>
-        <p>The Body Mass Index (BMI) is calculated as the weight in kilograms divided by the square of height in meters:</p>
-        <p><strong>BMI = Weight (kg) / Height (m)<sup>2</sup></strong></p>
-        <img src="bmi.jpg" alt="BMI Formula" class="responsive-media">
-        <h2>Visualization</h2>
-        <img src="Method.jpg" alt="Analyzing Obesity Levels Visualization" class="responsive-media">
+
+        <h2>Model Selection and Experimentation</h2>
+        <p>To uncover meaningful insights, we experimented with several machine learning models:</p>
+        <ul>
+            <li><strong>Multinomial Logistic Regression:</strong> Chosen for its flexibility in handling non-linear relationships and categorical outcomes.</li>
+            <li><strong>Decision Tree Classification:</strong> Used to predict obesity categories based on selected features, providing interpretability and insights into feature importance.</li>
+            <li><strong>Random Forest:</strong> Applied to examine nonlinearity and enhance predictive outcomes.</li>
+            <li><strong>Hierarchical Clustering:</strong> Utilized to explore lifestyle patterns and identify groups with similar characteristics.</li>
+        </ul>
+
+        <h2>Technical Findings</h2>
+        <ul>
+            <li><strong>Random Forest:</strong> Achieved the highest accuracy (85.5%) for predicting obesity levels.</li>
+            <li><strong>Multinomial Logistic Regression:</strong> Showed a model accuracy of 63.1%.</li>
+            <li><strong>Decision Tree Classification:</strong> Achieved a model accuracy of 78.9% with an F1 score of 87.6%.</li>
+            <li><strong>Hierarchical Clustering:</strong> Identified distinct lifestyle patterns, aiding in targeted interventions.</li>
+        </ul>
+
+        <h2>Challenges and Enhancements</h2>
+        <p>Throughout the project, we encountered several challenges, primarily related to data quality:</p>
+        <ul>
+            <li><strong>Duplicate Rows:</strong> Addressed by removing duplicates.</li>
+            <li><strong>Categorical Values:</strong> Converted non-integer values for smoother regression modeling.</li>
+            <li><strong>Missing Values:</strong> Eliminated rows with missing data to ensure consistency.</li>
+        </ul>
+        <p>By tackling these challenges head-on, we enhanced the overall model performance, ensuring the insights derived are robust and reliable.</p>
+
+        <h2>Implications and Applications</h2>
+        <p>The ultimate goal of our project is to integrate the insights derived from these models into practical health initiatives. These include:</p>
+        <ul>
+            <li><strong>Policy Formulation:</strong> Using model insights to inform and shape health policies.</li>
+            <li><strong>Resource Allocation:</strong> Guiding the distribution of resources based on predictive analytics.</li>
+            <li><strong>Intervention Design:</strong> Tailoring interventions based on model outcomes to address specific patterns in nutritional habits and physical activity levels.</li>
+            <li><strong>Preventive Programs:</strong> Launching educational campaigns and community fitness initiatives informed by trend predictions.</li>
+            <li><strong>Monitoring and Evaluation:</strong> Utilizing models for ongoing assessment and adjustment of health strategies.</li>
+        </ul>
+
+        <h2>Conclusion</h2>
+        <p>By leveraging machine learning models and comprehensive data analysis, we aim to enable a deeper understanding of obesity prevalence and incidence. This data-driven approach facilitates the creation of effective and targeted health strategies, ultimately contributing to a healthier society.</p>
     </div>
 </body>
 </html>
