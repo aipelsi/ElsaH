@@ -10,7 +10,7 @@
             padding: 0;
             width: 100%;
             height: 100%;
-            background: url("neuron.jpg") no-repeat center center fixed; 
+            background: url("neuron.jpg") no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
@@ -54,30 +54,27 @@
 
         .project-summary {
             display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 20px;
         }
 
         .project {
             background-color: #f9f9f9;
             border: 1px solid #ddd;
             border-radius: 8px;
-            width: 30%;
-            margin: 10px;
+            width: 100%;
             padding: 20px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s;
             display: flex;
-            flex-direction: column;
             align-items: center;
-            text-align: center;
         }
 
         .project img {
-            width: 100%;
-            max-width: 150px;
+            width: 150px;
+            height: 150px;
             border-radius: 8px;
-            margin-bottom: 15px;
+            margin-right: 20px;
         }
 
         .project:hover {
@@ -103,6 +100,7 @@
             border-radius: 5px;
             text-decoration: none;
             margin-top: 10px;
+            width: fit-content;
         }
 
         .project a:hover {
@@ -139,22 +137,28 @@
         <h2>Projects</h2>
         <div class="project-summary">
             <div class="project">
-                <img src="bmiP.jpg" alt="Obesity Prediction">
-                <h3>Obesity Prediction</h3>
-                <p>Using data from Colombia, Peru, and Mexico, this project predicts obesity levels based on environmental and behavioral attributes.</p>
-                <a href="javascript:void(0);" onclick="openProject('ObesityPrediction')">Read More</a>
+                <img src="Azure.jpeg" alt="Obesity Prediction">
+                <div>
+                    <h3>Obesity Prediction</h3>
+                    <p>Using data from Colombia, Peru, and Mexico, this project predicts obesity levels based on environmental and behavioral attributes.</p>
+                    <a href="javascript:void(0);" onclick="openProject('ObesityPrediction')">Read More</a>
+                </div>
             </div>
             <div class="project">
                 <img src="Azure.jpeg" alt="Car Loan Price Estimation">
-                <h3>Car Loan Price Estimation</h3>
-                <p>Analyzing business models and past data to determine the potential profitability of car loans for e-car organizations.</p>
-                <a href="javascript:void(0);" onclick="openProject('CarLoanEstimation')">Read More</a>
+                <div>
+                    <h3>Car Loan Price Estimation</h3>
+                    <p>Analyzing business models and past data to determine the potential profitability of car loans for e-car organizations.</p>
+                    <a href="javascript:void(0);" onclick="openProject('CarLoanEstimation')">Read More</a>
+                </div>
             </div>
             <div class="project">
                 <img src="Azure.jpeg" alt="Text to Video Generation">
-                <h3>Text to Video Generation</h3>
-                <p>Exploring AI models to generate videos from text, aimed at simplifying video production for educational and promotional purposes.</p>
-                <a href="javascript:void(0);" onclick="openProject('TextToVideoGeneration')">Read More</a>
+                <div>
+                    <h3>Text to Video Generation</h3>
+                    <p>Exploring AI models to generate videos from text, aimed at simplifying video production for educational and promotional purposes.</p>
+                    <a href="javascript:void(0);" onclick="openProject('TextToVideoGeneration')">Read More</a>
+                </div>
             </div>
         </div>
 
@@ -176,7 +180,7 @@
             <h4>Body Mass Index (BMI) Calculation</h4>
             <p>The Body Mass Index (BMI) is calculated as the weight in kilograms divided by the square of height in meters:</p>
             <p><strong>BMI = Weight (kg) / Height (m)<sup>2</sup></strong></p>
-            <img src="bmi.jpg" alt="BMI Formula" class="img.responsive-media">
+            <img src="bmi.jpg" alt="BMI Formula" class="responsive-media">
             <h4>Visualization</h4>
             <img src="Method.jpg" alt="Analyzing Obesity Levels Visualization" class="responsive-media">
            
@@ -263,25 +267,14 @@
 
     <script>
         function openProject(projectName) {
-            var i, tabcontent, tablinks;
+            var i, tabcontent;
             tabcontent = document.getElementsByClassName("tab-content");
             for (i = 0; i < tabcontent.length; i++) {
                 tabcontent[i].style.display = "none"; // Hide all tab content by default
             }
-            tablinks = document.getElementsByClassName("tab-link");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].classList.remove("active"); // Remove the "active" class from all tabs
-            }
             document.getElementById(projectName).style.display = "block"; // Show the specific tab content
             window.scrollTo(0, document.getElementById(projectName).offsetTop); // Scroll to the specific tab content
         }
-
-        window.onload = function() {
-            openProject('ObesityPrediction'); // Adjust as needed
-        };
     </script>
 </body>
 </html>
-
-            <p><a href="https://github.com/aipelsi/Price-Estimation-" target="_blank">Github Repository</a></p>
-            <p><strong>Purpose and Situation:</strong> This project is based on case study for autoloan org e-car. We will review and examine the business model and past data to determine if e-cars could potentially generate higher profits through auto car loans. According to the case study, e-car has encountered difficulties in obtaining loan acceptance from potential customers. Upon reviewing the case data, it became apparent that e-cars were offering considerably higher interest rates to customers deemed risky, placing them in a higher risk tier. We believe that e-car may have been overpricing its loans, significantly exceeding market rates for car loans. In today's competitive business landscape, e-cars
