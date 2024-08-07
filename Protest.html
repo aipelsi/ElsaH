@@ -111,6 +111,40 @@
         .project a:hover {
             background-color: #0056b3;
         }
+
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 28px;
+            }
+
+            .back-link {
+                font-size: 16px;
+                padding: 10px 15px;
+            }
+
+            .project {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .project img {
+                width: 100%;
+                margin: 0 0 20px 0;
+            }
+
+            .project:nth-child(2) img {
+                order: unset;
+                margin: 0 0 20px 0;
+            }
+
+            .project p {
+                font-size: 14px;
+            }
+
+            .project h3 {
+                font-size: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -119,7 +153,7 @@
         <h2>Projects</h2>
         <div class="project-summary">
             <div class="project">
-                <img src="bmiP.jpg" alt="Obesity Prediction">
+                <img src="Azure.jpeg" alt="Obesity Prediction">
                 <div>
                     <h3>Obesity Prediction</h3>
                     <p>Using data from Colombia, Peru, and Mexico, this project predicts obesity levels based on environmental and behavioral attributes.</p>
@@ -138,7 +172,7 @@
                 <img src="Azure.jpeg" alt="Text to Video Generation">
                 <div>
                     <h3>Text to Video Generation</h3>
-                    <p>Exploring Opensora AI model  to generate videos from text, aimed at simplifying video production for educational and promotional purposes.</p>
+                    <p>Exploring AI models to generate videos from text, aimed at simplifying video production for educational and promotional purposes.</p>
                     <a href="text_to_video_generation.html">Read More</a>
                 </div>
             </div>
