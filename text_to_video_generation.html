@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Video Generation</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        .content {
+            text-align: left;
+            padding: 20px;
+            background-color: #ffffff;
+            margin: auto;
+            width: 90%;
+            max-width: 1200px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <a href="index.html" class="back-link">Back to Projects</a>
+        <h1>Text to Video Generation</h1>
+        <p>Welcome to my ongoing journey with the Open-Sora AI video generator model! As a tool that connects the power of artificial intelligence to transform text into video, Open-Sora is nothing short of revolutionary. It's particularly designed for those of us who aren't pros in video editing but need to churn out high-quality educational or promotional videos. The AI takes over the heavy lifting, managing everything from scene transitions to text overlays, all while making the video production process a breeze for a broad audience.</p>
+        <h4>Why Dive Deeper?</h4>
+        <p>After dabbling with several models available on platforms like Hugging Face and GitHub, I found the initial excitement of generating videos started to fade. This led me to a pivotal decision: to dive deeper into the inner workings of video generation models. My goal? To not only understand but also to potentially enhance the architecture of these AI models. This exploration isn't just for kicks; it's aimed at making substantive contributions to the field and to my own work.</p>
+        <h4>My Roadmap</h4>
+        <p>Here’s how I plan to tackle this challenge:</p>
+        <ol>
+            <li>In-Depth Exploration: I’m dedicating time to studying various models, starting with Open-Sora, to grasp their intricacies.</li>
+            <li>Strengthening the Model: By diversifying the training data, I hope to enhance the model’s robustness and output quality.</li>
+            <li>Boosting Capabilities: More GPUs are on my shopping list to amp up the resolution and optimization of the videos.</li>
+            <li>Adding Sound: The final touch would be integrating audio to bring these videos to life.</li>
+        </ol>
+        <h4>Challenges Along the Way</h4>
+        <p>My journey has been exciting but not without hurdles. The most significant has been the GPU limitation. High-quality video generation demands powerful GPUs, and despite leveraging resources like Google Cloud, Colab Enterprise, and Vertex AI, it remains a bottleneck. Nonetheless, I've managed to run the model at lower resolutions and have been tinkering with the outputs, experimenting, and learning with each step. Please find my repository to play with the code, remember you will need to have access to GPU or else the model is not able to run.</p>
+        <h4>Generated Videos</h4>
+        <p>Bridge:</p>
+        <video src="Bridge.mp4" autoplay loop muted></video>
+        <p>Fashion show:</p>
+        <video src="FS.mp4" autoplay loop muted></video>
+        <p>Whale:</p>
+        <video src="Orca.mp4" autoplay loop muted></video>
+        <h4>Looking Ahead</h4>
+        <p>The videos we've been able to generate so far are just the beginning. They've been instrumental in comparing different approaches, like those from Midjourney, and thinking critically about how we can improve the Open-Sora model. This project is more than just a technical challenge; it’s a creative adventure that pushes the boundaries of AI video generation.</p>
+        <p>Stay tuned as I continue to navigate this exciting field, break down barriers, and hopefully contribute to an ever-evolving landscape of AI technology.</p>
+    </div>
+</body>
+</html>
