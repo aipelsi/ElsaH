@@ -98,7 +98,7 @@
     <p>Let’s embark on a journey through the fascinating intersection of information, tech, and data. Excited to have you along!</p>
 
     <div class="tabs-container">
-        <a href="Protest.html" class="tab">Projects</a>
+        <a href="projects.html" class="tab">Projects</a>
         <a href="data-visualization.html" class="tab">Data Visualization</a>
         <a href="blog.html" class="tab">Blog</a>
     </div>
