@@ -23,9 +23,9 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             color: #333;
             margin: 20px auto; /* Centering the container */
-            text-align: center;
-            width: 80%;
-            max-width: 800px;
+            text-align: left;
+            width: 90%;
+            max-width: 1000px; /* Adjusted max width for larger screens */
             flex: 1; /* Allow the container to grow and take up available space */
             display: flex;
             flex-direction: column;
@@ -64,7 +64,8 @@
         /* Styles for larger screens */
         @media (min-width: 1024px) {
             .container {
-                width: 60%; /* Adjusted for desktop */
+                width: 80%; /* Increased width for desktop */
+                max-width: 1200px; /* Adjusted for even larger screens */
             }
 
             .profile-photo, h1, h2, p, a, .tab {
@@ -112,4 +113,5 @@
 
 </body>
 </html>
+
 
