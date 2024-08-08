@@ -1,4 +1,3 @@
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,15 +18,16 @@
         }
 
         .container {
-            padding: 90px;
+            padding: 100px;
             background-color: rgba(255, 255, 255, 0.9);
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             color: #333;
             margin: 20px auto; /* Centering the container */
-            text-align: center;
-            width: 80%;
+            text-align: right;
+            width: 90%;
             max-width: 800px;
+            flex: 1; /* Added for footer positioning */
         }
 
         .profile-photo {
@@ -57,6 +57,7 @@
             text-align: center;
             padding: 10px;
             background-color: rgba(255, 255, 255, 0.9);
+            position: relative; /* Changed from absolute to relative */
         }
 
         /* Styles for larger screens */
