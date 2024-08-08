@@ -1,9 +1,9 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+    <title>My Portfolio</title>
     <style>
         body, html {
             margin: 0;
@@ -13,11 +13,14 @@
             font-size: 16px; /* Increased font size */
             background: url('neuron.jpg') no-repeat center center fixed;
             background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .container {
             padding: 90px;
-            background-color: rgba(255, 255, 255, 1);
+            background-color: rgba(255, 255, 255, 0.9);
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             color: #333;
@@ -48,6 +51,12 @@
             text-decoration: none;
             border-radius: 5px;
             margin: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
         }
 
         /* Styles for larger screens */
@@ -103,7 +112,9 @@
     </div>
 </div>
 
+<footer>
+    <p>&copy; 2024 Elsa Hagos</p>
+</footer>
+
 </body>
 </html>
-
-
