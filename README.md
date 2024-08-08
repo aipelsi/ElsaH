@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,7 +10,7 @@
             padding: 0;
             height: 100%;
             font-family: Arial, sans-serif;
-             font-size: 16px; /* Increased font size */
+            font-size: 16px; /* Increased font size */
             background: url('neuron.jpg') no-repeat center center fixed;
             background-size: cover;
         }
@@ -89,7 +90,6 @@
 
 <div class="container">
     <img src="pic.png" alt="Profile Photo" class="profile-photo">
-    <h1>Elsa Hagos</h1>
     <p>I am studying Information Systems as a graduate student at the University of Washington Foster School of Business. My passion lies in exploring AIML infrastructures and creating meaningful data visualizations. I thrive on diving into data, predicting social behaviors, evaluating health metrics, and tackling classification challenges.</p>
 
     <p>Check out my website’s Visualization tab to experience the power of visual storytelling with data. The Projects tab gives you a sneak peek into the exciting endeavors I’ve been a part of, and the Blogs tab offers insights and reflections.</p>
@@ -100,6 +100,12 @@
         <a href="Protest.html" class="tab">Projects</a>
         <a href="data-visualization.html" class="tab">Data Visualization</a>
         <a href="blog.html" class="tab">Blog</a>
+    </div>
+</div>
+
+</body>
+</html>
+
     </div>
 </div>
 
