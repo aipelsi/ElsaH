@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,26 +9,28 @@
             margin: 0;
             padding: 0;
             height: 100%;
+            display: flex;
+            flex-direction: column;
             font-family: Arial, sans-serif;
             font-size: 16px; /* Increased font size */
             background: url('neuron.jpg') no-repeat center center fixed;
             background-size: cover;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
         }
 
         .container {
-            padding: 100px;
+            padding: 90px;
             background-color: rgba(255, 255, 255, 0.9);
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             color: #333;
             margin: 20px auto; /* Centering the container */
-            text-align: right;
-            width: 90%;
+            text-align: center;
+            width: 80%;
             max-width: 800px;
-            flex: 1; /* Added for footer positioning */
+            flex: 1; /* Allow the container to grow and take up available space */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center content vertically */
         }
 
         .profile-photo {
@@ -57,16 +60,11 @@
             text-align: center;
             padding: 10px;
             background-color: rgba(255, 255, 255, 0.9);
-            position: relative; /* Changed from absolute to relative */
         }
 
         /* Styles for larger screens */
         @media (min-width: 1024px) {
             .container {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
                 width: 60%; /* Adjusted for desktop */
             }
 
@@ -82,10 +80,6 @@
             }
 
             .container {
-                position: static;
-                transform: none;
-                top: auto;
-                left: auto;
                 width: 90%; /* More width for smaller screens */
             }
 
@@ -119,3 +113,4 @@
 
 </body>
 </html>
+
