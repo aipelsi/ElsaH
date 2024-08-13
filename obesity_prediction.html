@@ -57,6 +57,26 @@
             max-width: 100%;
             height: auto;
         }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .image-grid img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-caption {
+            text-align: center;
+            font-size: 16px;
+            color: #555;
+            margin-top: 5px;
+        }
     </style>
 </head>
 <body>
@@ -95,6 +115,26 @@
             <li><strong>Hierarchical Clustering:</strong> Identified distinct lifestyle patterns, aiding in targeted interventions.</li>
         </ul>
 
+        <!-- Image Grid -->
+        <div class="image-grid">
+            <div>
+                <img src="4.jpg" alt="Random Forest Results">
+                <div class="image-caption">Random Forest Results</div>
+            </div>
+            <div>
+                <img src="3.jpg" alt="Multinomial Logistic Regression Results">
+                <div class="image-caption">Multinomial Logistic Regression Results</div>
+            </div>
+            <div>
+                <img src="1.jpg" alt="Decision Tree Classification Results">
+                <div class="image-caption">Decision Tree Classification Results</div>
+            </div>
+            <div>
+                <img src="2.jpg" alt="Hierarchical Clustering Results">
+                <div class="image-caption">Hierarchical Clustering Results</div>
+            </div>
+        </div>
+
         <h2>Challenges and Enhancements</h2>
         <p>Throughout the project, we encountered several challenges, primarily related to data quality:</p>
         <ul>
@@ -117,5 +157,8 @@
         <h2>Conclusion</h2>
         <p>By leveraging machine learning models and comprehensive data analysis, we aim to enable a deeper understanding of obesity prevalence and incidence. This data-driven approach facilitates the creation of effective and targeted health strategies, ultimately contributing to a healthier society.</p>
     </div>
+</body>
+</html>
+
 </body>
 </html>
