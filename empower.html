@@ -13,7 +13,7 @@
             padding: 0;
         }
         .container {
-            max-width: 800px;
+            max-width: 1200px; /* Increased width for wider display */
             margin: 40px auto;
             padding: 20px;
             background-color: white;
@@ -61,7 +61,7 @@
         }
         video {
             width: 100%;
-            max-width: 720px;
+            max-width: 1080px; /* Increased max-width */
             height: auto;
             border-radius: 10px;
             margin-top: 20px;
@@ -78,6 +78,16 @@
             width: 100%; /* Set to full width of the container */
             border-radius: 10px;
             margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                max-width: 95%; /* Make container almost full width on mobile */
+                margin: 20px auto;
+                padding: 10px;
+            }
+            video {
+                max-width: 100%; /* Ensure video scales down on smaller screens */
+            }
         }
     </style>
 </head>
@@ -101,7 +111,7 @@
         
         <div class="video-container">
             <h3>Watch a Demo</h3>
-            <p>View a recorded walkthrough of the platform, where we explain how it works, step-by-step, and what you can expect when using it.</p>
+            <p>View a recorded walkthrough of the platform, where we explain how it works, step-by-step, and what you can expect when using it.Cusromer: Maria Doe</p>
             <video controls>
                 <source src="Loan Video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
@@ -109,10 +119,11 @@
         </div>
 
         <h2>User Roadmap</h2>
-        <p>Our journey is built around you—the entrepreneur. Here’s what you can expect as you interact with EmpowerLend AI:</p>
+        <p>Our journey is built around the entrepreneur. Here’s what you can expect as you interact with EmpowerLend AI:</p>
         <div class="image-container">
             <img src="journey.png" alt="Customer Journey">
         </div>
     </div>
 </body>
 </html>
+
