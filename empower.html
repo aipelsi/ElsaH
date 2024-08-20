@@ -7,24 +7,29 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #4a235a; /* Dark purple background */
-            color: white;
+            background-color: #ffffff; /* White background */
+            color: black;
             margin: 0;
-            padding: 0 20px;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border: 2px solid black; /* Black border */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow for a subtle 3D effect */
         }
         header {
             text-align: center;
-            margin: 20px 0;
+            margin-bottom: 20px;
         }
         h1, h2, h3 {
-            color: #f4ecf7; /* Light purple text */
+            color: #333; /* Darker text color */
         }
         p {
             line-height: 1.6;
-        }
-        .content {
-            max-width: 800px;
-            margin: auto;
         }
         .button {
             background-color: #7d3c98; /* Lighter purple */
@@ -37,8 +42,18 @@
             font-size: 16px;
             border-radius: 5px;
             text-decoration: none;
-            margin-top: 20px;
             display: inline-block;
+            margin-top: 20px;
+        }
+        .button-back {
+            background-color: #333; /* Dark button for back */
+            margin-bottom: 20px;
+        }
+        .button:hover {
+            background-color: #5e2878; /* Darker purple for hover effect */
+        }
+        .button-back:hover {
+            background-color: #000; /* Black for hover effect */
         }
         .video-container, .image-container {
             margin: 20px 0;
@@ -60,12 +75,18 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>EmpowerLend AI - Business Agenda</h1>
-    </header>
-    <div class="content">
+    <div class="container">
+        <header>
+            <h1>EmpowerLend AI - Business Agenda</h1>
+        </header>
+
+        <a href="projects.html" class="button button-back">Back to Projects</a> <!-- Back button to Projects page -->
+
         <h2>Our Objective</h2>
         <p>At EmpowerLend AI, our goal is simple: to make it easier for women-owned small businesses to access fair loans. We use AI technology to assess loan applications in a way that’s unbiased and accurate, helping more women get the financial support they need. Beyond loans, we’re here to empower you with financial education and mentorship, so you can grow your business with confidence.</p>
+
+        <h2>Technical Overview</h2>
+        <p>The EmpowerLend AI platform utilizes advanced machine learning techniques to predict loan approvals. The data is first cleaned and preprocessed, with irrelevant columns dropped and categorical data one-hot encoded. Date columns are converted into relevant numerical formats. The data is then normalized using a `StandardScaler`, which ensures that features have a mean of 0 and a standard deviation of 1. After splitting the data into training and testing sets, a neural network model is built using Keras with TensorFlow as the backend. The model consists of two hidden layers and is trained to predict whether a loan will be paid in full. The trained model and the scaler are saved for use in the application, ensuring that new user data can be processed and predictions can be made efficiently.</p>
 
         <h2>Explore the EmpowerLend AI Prototype</h2>
         <p>We’ve developed a prototype to demonstrate how our AI-driven loan assessment works. See the platform in action, and experience how it can help assess your loan eligibility in a fair and unbiased way.</p>
@@ -88,3 +109,4 @@
     </div>
 </body>
 </html>
+
