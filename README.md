@@ -1,15 +1,14 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Content Page</title>
     <style>
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
-            display: flex;
-            flex-direction: column;
             font-family: Arial, sans-serif;
             font-size: 16px; /* Increased font size */
             background: url('neuron.jpg') no-repeat center center fixed;
@@ -18,18 +17,14 @@
 
         .container {
             padding: 90px;
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(255, 255, 255, 1);
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             color: #333;
             margin: 20px auto; /* Centering the container */
-            text-align: left;
-            width: 90%;
-            max-width: 1000px; /* Adjusted max width for larger screens */
-            flex: 1; /* Allow the container to grow and take up available space */
-            display: flex;
-            flex-direction: column;
-            justify-content: center; /* Center content vertically */
+            text-align: center;
+            width: 80%;
+            max-width: 800px;
         }
 
         .profile-photo {
@@ -55,18 +50,14 @@
             margin: 5px;
         }
 
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: rgba(255, 255, 255, 0.9);
-        }
-
         /* Styles for larger screens */
         @media (min-width: 1024px) {
             .container {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
                 width: 60%; /* Adjusted for desktop */
-                width: 80%; /* Increased width for desktop */
-                max-width: 1200px; /* Adjusted for even larger screens */
             }
 
             .profile-photo, h1, h2, p, a, .tab {
@@ -81,6 +72,10 @@
             }
 
             .container {
+                position: static;
+                transform: none;
+                top: auto;
+                left: auto;
                 width: 90%; /* More width for smaller screens */
             }
 
@@ -92,12 +87,22 @@
     </style>
 </head>
 <body>
+
 <div class="container">
     <img src="pic.png" alt="Profile Photo" class="profile-photo">
-    <p>I recently graduated with a degree in Information Systems from the University of Washington Foster School of Business. My passion lies in exploring AIML infrastructures and creating meaningful data visualizations. I thrive on working with data, predicting social behaviors, evaluating health metrics, and solving classification challenges.</p>
+    <p>I am studying Information Systems as a graduate student at the University of Washington Foster School of Business. My passion lies in exploring AIML infrastructures and creating meaningful data visualizations. I thrive on diving into data, predicting social behaviors, evaluating health metrics, and tackling classification challenges.</p>
 
-    <p>Check out the Visualization tab on my website to experience the power of visual storytelling with data. The Projects tab offers a glimpse into the exciting work I've been involved in, while the Blogs tab shares insights and reflections.</p>
+    <p>Check out my website’s Visualization tab to experience the power of visual storytelling with data. The Projects tab gives you a sneak peek into the exciting endeavors I’ve been a part of, and the Blogs tab offers insights and reflections.</p>
 
-    <p>Join me as we explore the intersection of information, technology, and data. I’m excited to share my work and insights with you.</p>
+    <p>Let’s embark on a journey through the fascinating intersection of information, tech, and data. Excited to have you along!</p>
 
-    <div class="
+    <div class="tabs-container">
+        <a href="Protest.html" class="tab">Projects</a>
+        <a href="data-visualization.html" class="tab">Data Visualization</a>
+        <a href="blog.html" class="tab">Blog</a>
+    </div>
+</div>
+
+</body>
+</html>
+
