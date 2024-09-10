@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Dashboards</title>
     <style>
         body, html {
@@ -15,7 +17,7 @@
             background-size: cover;
         }
         
-        .header, .tab, .description {
+        .header, .description {
             text-align: center;
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.9);
@@ -29,7 +31,19 @@
             font-weight: bold;
         }
 
-        .tab-link, .back-link {
+        .tab {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 20px auto;
+            width: 80%;
+            max-width: 960px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .tab-link {
             background-color: #f9f9f9;
             border: none;
             outline: none;
@@ -50,17 +64,34 @@
             position: absolute;
             top: 10px;
             left: 10px;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
         }
 
-        .back-link:hover, .tab-link:hover {
+        .back-link:hover {
             background-color: #0056b3;
+        }
+
+        .tab-link.pink {
+            background-color: #ffb6c1;
+        }
+
+        .tab-link.green {
+            background-color: #90ee90;
+        }
+
+        .tab-link.beige {
+            background-color: #f5f5dc;
+        }
+
+        .tab-link:hover {
+            opacity: 0.8;
         }
 
         .tabcontent {
             display: none;
             padding: 20px;
-            border: 1px solid #ddd;
-            border-top: none;
             margin: 0 auto;
             text-align: center;
             width: 80%;
@@ -84,6 +115,13 @@
                 min-height: 400px;
             }
         }
+
+        /* Responsive adjustments for COVID-19 dashboard */
+        @media screen and (max-width: 600px) {
+            #Dashboard3 iframe {
+                min-height: 300px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -92,18 +130,16 @@
 
 <div class="tab">
     <a href="https://aipelsi.github.io/ElsaH/" class="back-link">Back</a>
-    <button class="tab-link" onclick="openDashboard(event, 'City-of-Seattle-Recycling-and-Waste')">Recycling and Waste Management</button>
-    <button class="tab-link" onclick="openDashboard(event, 'Dashboard2')">Airbnb Market Analysis</button>
-    <button class="tab-link" onclick="openDashboard(event, 'Dashboard3')">Covid19 Vaccine Count</button>
+    <button class="tab-link pink" onclick="openDashboard(event, 'City-of-Seattle-Recycling-and-Waste')">Recycling and Waste Management</button>
+    <button class="tab-link green" onclick="openDashboard(event, 'Dashboard2')">Airbnb Market Analysis</button>
+    <button class="tab-link beige" onclick="openDashboard(event, 'Dashboard3')">Covid19 Vaccine Count</button>
 </div>
-
 
 <div id="City-of-Seattle-Recycling-and-Waste" class="tabcontent">
     <p class="description">This dashboard provides insights into the City of Seattle's recycling and waste management performance over the years.</p>
-    <!-- Embed code for Dashboard 1: City of Seattle Recycling and Waste -->
     <div class='tableauPlaceholder' id='viz1712101122631' style='position: relative'>
         <noscript>
-            <a href='#'><img alt='City of Seattle Recycling and Waste Journey to 70% Recycling (2000-2020) ' src='https://public.tableau.com/static/images/Ci/CityofSeattleRecyclingandWaste_17060666254950/Dashboard2/1_rss.png' style='border: none' /></a>
+            <a href='#'><img alt='City of Seattle Recycling and Waste Journey to 70% Recycling (2000-2020)' src='https://public.tableau.com/static/images/Ci/CityofSeattleRecyclingandWaste_17060666254950/Dashboard2/1_rss.png' style='border: none' /></a>
         </noscript>
         <object class='tableauViz' style='display:none;'>
             <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
@@ -121,21 +157,10 @@
             <param name='language' value='en-US' />
         </object>
     </div>
-    <script type='text/javascript'> 
-        var divElement = document.getElementById('viz1712101122631'); 
-        var vizElement = divElement.getElementsByTagName('object')[0]; 
-        vizElement.style.width='1100px';vizElement.style.height='927px'; 
-        var scriptElement = document.createElement('script'); 
-        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; 
-        vizElement.parentNode.insertBefore(scriptElement, vizElement); 
-    </script>
-</div>
-
 </div>
 
 <div id="Dashboard2" class="tabcontent">
     <p class="description">This dashboard provides a market analysis of Airbnb listings in West Seattle.</p>
-    <!-- Embed code for Dashboard 2: Airbnb Market Analysis: West Seattle -->
     <div class='tableauPlaceholder' id='viz1712101751510' style='position: relative'>
         <noscript>
             <a href='#'><img alt='Airbnb Market Analysis: West Seattle 1br, 98126Customer: Jessica' src='https://public.tableau.com/static/images/Ai/AirbnbMarketAnalysisforWestSeattle1BR/Dashboard2/1_rss.png' style='border: none' /></a>
@@ -156,24 +181,15 @@
             <param name='language' value='en-US' />
         </object>
     </div>
-    <script type='text/javascript'> 
-        var divElement = document.getElementById('viz1712101751510'); 
-        var vizElement = divElement.getElementsByTagName('object')[0]; 
-        vizElement.style.width='1100px';vizElement.style.height='927px'; 
-        var scriptElement = document.createElement('script'); 
-        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; 
-        vizElement.parentNode.insertBefore(scriptElement, vizElement); 
-    </script>
-    
 </div>
-    <div id="Dashboard3" class="tabcontent">
+
+<div id="Dashboard3" class="tabcontent">
     <p class="description">This dashboard provides insights into COVID Vaccines Administered in Washington State through 3/30/21.</p>
-    <!-- Embed code for Dashboard 3: COVID Vaccines Administered in Washington State -->
     <div class='tableauPlaceholder' id='viz1712631336199' style='position: relative'>
         <noscript>
-            <a href='#'><img alt='COVID Vaccines Administered in Washington State (through 3/30/21) ' src='https://public.tableau.com/static/images/CO/COVIDVaccinesAdministeredinWashingtonStatethrough33021_17126240662610/COVIDVaccinesAdministeredinWashingtonStatethrough33021/1_rss.png' style='border: none' /></a>
+            <a href='#'><img alt='COVID Vaccines Administered in Washington State (through 3/30/21)' src='https://public.tableau.com/static/images/CO/COVIDVaccinesAdministeredinWashingtonStatethrough33021_17126240662610/COVIDVaccinesAdministeredinWashingtonStatethrough33021/1_rss.png' style='border: none' /></a>
         </noscript>
-        <object class='tableauViz'  style='display:none;'>
+        <object class='tableauViz' style='display:none;'>
             <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
             <param name='embed_code_version' value='3' />
             <param name='site_root' value='' />
@@ -189,8 +205,9 @@
             <param name='language' value='en-US' />
         </object>
     </div>
-<div>
-    <script>
+</div>
+
+<script>
     function openDashboard(evt, dashboardName) {
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");
@@ -212,3 +229,4 @@
 
 </body>
 </html>
+
