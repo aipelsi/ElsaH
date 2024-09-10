@@ -44,7 +44,6 @@
         }
 
         .tab-link {
-            background-color: #f9f9f9;
             border: none;
             outline: none;
             cursor: pointer;
@@ -56,6 +55,22 @@
             border-radius: 5px;
             margin: 5px 0;
             font-weight: bold;
+        }
+
+        .tab-link.pink {
+            background-color: #ffb6c1;
+        }
+
+        .tab-link.green {
+            background-color: #90ee90;
+        }
+
+        .tab-link.beige {
+            background-color: #f5f5dc;
+        }
+
+        .tab-link:hover {
+            opacity: 0.8;
         }
 
         .back-link {
@@ -71,10 +86,6 @@
 
         .back-link:hover {
             background-color: #0056b3;
-        }
-
-        .tab-link:hover {
-            background-color: #ddd;
         }
 
         .tabcontent {
@@ -103,6 +114,13 @@
                 min-height: 400px;
             }
         }
+
+        /* Responsive adjustments for COVID-19 dashboard */
+        @media screen and (max-width: 600px) {
+            #Dashboard3 iframe {
+                min-height: 300px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -111,9 +129,9 @@
 
 <div class="tab">
     <a href="https://aipelsi.github.io/ElsaH/" class="back-link">Back</a>
-    <button class="tab-link" onclick="openDashboard(event, 'City-of-Seattle-Recycling-and-Waste')">Recycling and Waste Management</button>
-    <button class="tab-link" onclick="openDashboard(event, 'Dashboard2')">Airbnb Market Analysis</button>
-    <button class="tab-link" onclick="openDashboard(event, 'Dashboard3')">Covid19 Vaccine Count</button>
+    <button class="tab-link pink" onclick="openDashboard(event, 'City-of-Seattle-Recycling-and-Waste')">Recycling and Waste Management</button>
+    <button class="tab-link green" onclick="openDashboard(event, 'Dashboard2')">Airbnb Market Analysis</button>
+    <button class="tab-link beige" onclick="openDashboard(event, 'Dashboard3')">Covid19 Vaccine Count</button>
 </div>
 
 
@@ -235,6 +253,9 @@
         document.getElementsByClassName('tab-link')[0].click(); // Automatically click the first tab to load the first dashboard
     };
 </script>
+
+</body>
+</html>
 
 </body>
 </html>
