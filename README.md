@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -124,9 +124,9 @@
 
 <div class="container">
     <img src="pic.png" alt="Profile Photo" class="profile-photo">
-    <p>I recently graduated with MS degree in Information Systems from the University of Washington Foster School of Business. My passion lies in exploring AIML infrastructures and creating meaningful data visualizations. I thrive on working with data, predicting social behaviors, evaluating health metrics, and solving classification challenges.</p>
+    <p>I recently graduated with MS degree in Information Systems from the University of Washington Foster School of Business. My passion lies in exploring AIML models in the cloud infrastructures and creating meaningful data visualizations. I enjoy working with data, predicting social behaviors, evaluating health metrics, and solving classification challenges.</p>
 
-    <p>Check out the Visualization tab on my website to experience the power of visual storytelling with data. The Projects tab offers a glimpse into the exciting work I've been involved in, while the Blogs tab shares insights and reflections.</p>
+ <p> Outside of work, you’ll often find me on the tennis court, perfecting my serve and enjoying the thrill of the game.</p> 
 
     <p>Join me as we explore the intersection of information, technology, and data. I’m excited to share my work and insights with you.</p>
 
