@@ -133,7 +133,7 @@
     <div class="tabs-container">
         <a href="Protest.html" class="tab">Projects</a>
         <a href="data-visualization.html" class="tab">Data Visualization</a>
-        #<a href="blog.html" class="tab">Blog</a>
+        <!-- <a href="blog.html" class="tab">Blog</a> -->
     </div>
 </div>
 
